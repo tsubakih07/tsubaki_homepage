@@ -19,12 +19,11 @@
       line-height: 1.7;
     }
     h1 {
-      color: #333;
+      color: #444;
     }
     h2 {
-      border-bottom: 1px solid #ccc;
       padding-bottom: 0.3rem;
-      color: #333;
+      color: #444;
     }
     ul {
       padding-left: 1.5rem;
@@ -50,11 +49,18 @@
   </style>
 </head>
 
+<script>
+  function toggleMenu() {
+    document.getElementById('nav-menu').classList.toggle('show');
+  }
+</script>
+
 <body>
 <div class="bg-overlay"></div>
 
 <header class="header">
-  <div style="font-weight: bold;"><a href="index.html">Tsubaki Hosokawa</a></div>
+  <div style="font-weight: bold;">
+    <a style="margin-left: 10rem;" href="index.html">Tsubaki Hosokawa</a></div>
   <div class="menu-toggle;" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </div>
@@ -64,6 +70,9 @@
     <a href="cv.html">CV</a>
     <a href="news.html">News</a>
   </nav>
+    <div class="language-switch">
+      <a href="cv.html">English</a> | <a href="index_ja.html">日本語</a>
+    </div>
 </header>
 
 <script>
@@ -74,12 +83,17 @@
 
 <h1 style="margin-top: 3rem;">Curriculum Vitae</h1>
 
+
+<section class="section"></section>
 <p><strong>Tsubaki Hosokawa</strong><br>
 Ph.D. Candidate, Dept. of Atmospheric Sciences, National Taiwan University<br>
-Email: <a href="mailto:d10229006@ntu.edu.tw">d10229006@ntu.edu.tw</a><br>
+Email: <a href="mailto:d10229006@ntu.edu.tw">d10229006❄ntu.edu.tw</a><br>
 📄 <a href="https://drive.google.com/file/d/1T6GiXu-OLAyBPLtVutVjeOaEnKnI9orF/view?usp=drive_link" target="_blank">Download full PDF CV</a>
 </p>
+</section>
 
+
+<section class="section">
 <h2>Education</h2>
 <ul>
   <li><strong>Ph.D. in Atmospheric Sciences</strong>, National Taiwan University, Sep 2021 – Present<br>
@@ -92,12 +106,16 @@ Email: <a href="mailto:d10229006@ntu.edu.tw">d10229006@ntu.edu.tw</a><br>
     Advisor: Prof. Hiroyuki Yamada, Okinawa, Japan
   </li>
 </ul>
+</section>
 
+<section class="section">
 <h2>Peer-Reviewed Publication</h2>
 <ul>
   <li>Hosokawa, T. and C.-K. Yu, 2025: Kinematics and Microphysics of Orographic Precipitation Associated with Different Background Precipitation of Typhoon Chanthu (2021), <em>J. Atmos. Sci.</em>, under review.</li>
 </ul>
+</section>
 
+<section class="section">
 <h2>Awards</h2>
 <ul>
   <li>Outstanding Presentation Award, AMS Conference on Mountain Meteorology, 2024</li>
@@ -105,7 +123,9 @@ Email: <a href="mailto:d10229006@ntu.edu.tw">d10229006@ntu.edu.tw</a><br>
   <li>Best Student Poster Award, AOGS, 2022</li>
   <li>Best Student Presentation Award, ICMCS-XIV, 2021</li>
 </ul>
+</section>
 
+<section class="section">
 <h2>Conference Presentations (Selected)</h2>
 <ul>
   <li>AMS 21st Conference on Mesoscale Processes, Boise, USA, 2025</li>
@@ -114,28 +134,36 @@ Email: <a href="mailto:d10229006@ntu.edu.tw">d10229006@ntu.edu.tw</a><br>
   <li>ICMCS-XV, Colorado, USA (online), 2023</li>
   <li>MSJ Autumn Meeting, Japan, 2020</li>
 </ul>
+</section>
 
+<section class="section">
 <h2>Grants</h2>
 <ul>
   <li>NTU Outstanding International Graduate Student Scholarship (2021–2025)</li>
   <li>Tobitate! (Leap for Tomorrow) Study Abroad Initiative, MEXT Japan (2018–2019)</li>
 </ul>
+</section>
 
+<section class="section">
 <h2>Professional Experience</h2>
 <ul>
   <li>Teaching Assistant, Synoptic Meteorology Lab II, NTU (2022–2025)</li>
   <li>Research Visiting Student, Mesoscale Lab (P3), NTU (2018–2019)</li>
   <li>Intern, Okinawa Institute of Science and Technology (2018–2019)</li>
 </ul>
+</section>
 
 
+<section class="section">
 <h2>Technical Skills</h2>
 <ul>
   <li><strong>Programming:</strong> Python, Fortran, NCL</li>
   <li><strong>Tools:</strong> VS Code, LaTeX, Shell (bash, csh, zsh)</li>
   <li><strong>Platforms:</strong> Windows, Linux</li>
 </ul>
+</section>
 
+<section class="section">
 <h2>Languages</h2>
 <ul>
   <li>Japanese (Native)</li>
@@ -143,6 +171,7 @@ Email: <a href="mailto:d10229006@ntu.edu.tw">d10229006@ntu.edu.tw</a><br>
   <li>Chinese (TOCFL B1)</li>
   <li>Korean (working on...)</li>
 </ul>
+</section>
 
 <p><a href="index.html">← Back to Home</a></p>
 

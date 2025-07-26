@@ -1,111 +1,205 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>細川 椿 | 細川 椿</title>
+  <title>細川椿 | ホーム</title>
+  <link rel="icon" href="images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <div class="language-switch">
+    <a href="index.html">English</a> | <a href="index_ja.html">日本語</a>
+  </div>
   <style>
     body {
-      font-family: 'Muli', sans-serif;
+      font-family: 'Muli', 'メイリオ', sans-serif;
       max-width: 900px;
       margin: auto;
       padding: 2rem;
       line-height: 1.7;
       background-color: #f8f8f8;
     }
+
     h1, h2 {
-      color: #333;
+      color: #444;
     }
+
     a {
-      color: #007acc;
+      color: #887660;
       text-decoration: none;
     }
-    a:hover {
-      text-decoration: underline;
-    }
+
     .section {
-      background-color: #fff;
+      background-color: rgba(237, 236, 234, 0.75);
       padding: 1.5rem;
       margin-bottom: 1.5rem;
       border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+      margin-left: 1rem;
+      box-shadow: 0 0 10px rgba(58, 56, 56, 0.05);
     }
-    .contact-icons a {
-      margin-right: 10px;
+
+    .bg-overlay {
+      background-image: url('images/radar_fig1.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.3;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      pointer-events: none;
     }
-  
-    @media (max-width: 600px) {
+
+    .hobbies-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .hobbies-list {
+      flex: 1 1 300px;
+    }
+
+    .hobbies-photo {
+      margin-left: 1rem;
+    }
+
+    @media (max-width: 800px) {
       body {
         padding: 1rem;
       }
+
       .section {
         padding: 1rem;
       }
-    }
-    </style>
-</head>
-<body>
 
-  <header class="section">
-    <h1>細川 椿（Tsubaki Hosokawa）</h1>
-    <p>Ph.D. Candidate in Atmospheric Sciences at National Taiwan University</p>
-    <p>Email: <a href="mailto:d10229006@ntu.edu.tw">d10229006@ntu.edu.tw</a></p>
-    <p>Phone: +886-937-532-0222</p>
-    <div class="contact-icons">
-      <a href="https://github.com/your-github-username" target="_blank" title="GitHub"><i class="fab fa-github fa-lg"></i></a>
+      .hobbies-container {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hobbies-photo {
+        margin-left: 0;
+        margin-top: 1rem;
+        text-align: center;
+      }
+    }
+
+    header.header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    nav.nav a {
+      margin-right: 1.5rem;
+      font-weight: 600;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="bg-overlay"></div>
+
+  <header class="header">
+    <div style="font-weight: bold;">
+      <a style="margin-left: 10rem;" href="index.html">Tsubaki Hosokawa</a></div>
+
+    <nav class="nav" id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="cv.html">CV</a>
+      <a href="news.html">News</a>
+    </nav>
+  
+    <div class="language-switch">
+      <a href="index.html">English</a> | <a href="index_ja.html">日本語</a>
     </div>
-    <p><a href="cv.html">履歴書</a> | <a href="research.html">研究内容</a></p>
   </header>
 
-  <img src="images/profile.jpg" alt="Profile Photo" style="max-width:150px;border-radius:50%;margin-bottom:1rem;">
-<section class="section">
-    <h2>研究紹介</h2>
-    <p>I am a Ph.D. candidate at <a href="https://www.ntu.edu.tw/english/">National Taiwan University</a> under the supervision of Dr. Cheng-Ku Yu. My research focuses on orographic precipitation and extreme rainfall associated with tropical cyclones in Taiwan and southern Japan. I use polarimetric radar observations, numerical simulations, and field campaign data to investigate precipitation microphysics and dynamics. I am currently seeking a postdoctoral position starting in 2026.</p>
-  <img src="images/radar_fig1.jpg" alt="Radar Figure" style="width:100%;margin-top:1rem;border:1px solid #ccc;">
+<script>
+  function toggleMenu() {
+    document.getElementById('nav-menu').classList.toggle('show');
+  }
+</script>
+
+  <header class="section" style="display: flex; align-items: center; gap: 5rem; flex-wrap: wrap; margin-top: 3rem;">
+    <div>
+      <h1>こんにちは、細川椿です。</h1>
+      <p>台湾大学・大気科学専攻 博士課程</p>
+      <p>Email: <a href="mailto:d10229006@ntu.edu.tw">d1022900❄ntu.edu.tw</a></p>
+    </div>
+    <div class="profile-photo">
+      <img src="images/profile2.png" alt="プロフィール写真" style="height: 300px; border-radius: 50%; flex-shrink: 0;">
+    </div>
+  </header>
+
   <section class="section">
-    <h2>最近の論文</h2>
+    <h2>自己紹介</h2>
+    <p>私は台湾大学で台風による地形性降水と極端降水の研究をしています。観測には偏波レーダーや雨量計、ディスドロメータを用いて、降水の微物理や力学的構造を調べています。出身は沖縄県です。</p>
+  </section>
+
+  <section class="section">
+    <h2>最新の論文</h2>
     <ul>
-      <li>
-        Hosokawa, T. and C.-K. Yu, 2025: <em>Kinematics and Microphysics of Orographic Precipitation Associated with Different Background Precipitation of Typhoon Chanthu (2021)</em>. <strong>Journal of the Atmospheric Sciences</strong>, submitted.
-      </li>
+        <li>
+        <strong>Hosokawa, T.</strong> and C.-K. Yu, 2025: Kinematics and Microphysics of Orographic Precipitation Associated with Different Background Precipitation of Typhoon Chanthu (2021), <em>J. Atmos. Sci.</em>, under review.
+        </li>
     </ul>
   </section>
 
   <section class="section">
     <h2>受賞歴</h2>
     <ul>
-      <li>Outstanding Presentation Award, AMS 21st Conference on Mountain Meteorology (2024)</li>
-      <li>Outstanding Student Presentation Award, ICMCS-XV (2023)</li>
-      <li>Best Student Poster Award, AOGS 2022</li>
-      <li>Best Student Presentation Award, ICMCS-XIV (2021)</li>
+      <li>AMS山岳気象学会 最優秀発表賞（2024）</li>
+      <li>ICMCS-XV 学生優秀発表賞（2023）</li>
+      <li>AOGS 学生ポスター賞（2022）</li>
     </ul>
   </section>
 
   <section class="section">
     <h2>学歴</h2>
     <ul>
-      <li><strong>Ph.D. in Atmospheric Science</strong>, National Taiwan University (Sep 2021 – present)</li>
-      <li><strong>M.S. in Science</strong>, University of the Ryukyus (Apr 2018 – Mar 2021)</li>
-      <li><strong>B.S. in Science</strong>, University of the Ryukyus (Apr 2014 – Mar 2018)</li>
+      <li>博士（大気科学） 台湾大学（2021年9月～）</li>
+      <li>修士（理学） 琉球大学（2018～2021）</li>
+      <li>学士（理学） 琉球大学（2014～2018）</li>
     </ul>
   </section>
 
   <section class="section">
     <h2>主な学会発表</h2>
     <ul>
-      <li>AMS 21st Conference on Mesoscale Processes, Boise, USA, Jun 2025</li>
-      <li>AMS 21st Conference on Mountain Meteorology, Boise, USA, Jul 2024</li>
-      <li>AOGS 2024, Pyeongchang, Korea</li>
-      <li>ICMCS-XV, Colorado, USA (Online), May 2023</li>
+      <li>AMS 中規模プロセス会議（アメリカ、2025年）</li>
+      <li>AMS 山岳気象会議（アメリカ、2024年）</li>
+      <li>AOGS（韓国、2024年）</li>
     </ul>
+  </section>
+
+  <section class="section">
+    <h2>趣味</h2>
+    <div class="hobbies-container">
+      <ul class="hobbies-list">
+        <li>トロンボーン演奏（ジャズ・クラシック）</li>
+        <li>音楽鑑賞（ジャズ、R&B、ポップ）</li>
+        <li>猫と過ごすこと</li>
+        <li>友人との旅行</li>
+        <li>語学学習（英語、中国語、韓国語）</li>
+      </ul>
+      <div class="hobbies-photo; profile-photo">
+        <img src="images/cat.png" alt="猫画像" style="height: 300px;">
+      </div>
+    </div>
   </section>
 
   <footer class="section">
     <p>&copy; 2025 Tsubaki Hosokawa. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
