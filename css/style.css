@@ -1,0 +1,236 @@
+.menu__toggle__icon{float:right;position:relative;width:24px;height:20px;margin-left:8px}
+.menu__toggle__icon span,.menu__toggle__icon span:before,.menu__toggle__icon span:after{content:'';position:absolute;top:8px;left:0;width:100%;height:3px;-webkit-transition:all 0.1s;-moz-transition:all 0.1s;-ms-transition:all 0.1s;-o-transition:all 0.1s;transition:all 0.1s;background:#2A2F36}
+.menu__toggle__icon span:before{top:-8px}
+.menu__toggle__icon span:after{top:8px}
+.menu--open 
+.menu__toggle__icon span:before,.menu--open 
+.menu__toggle__icon span:after{background:#444 !important}
+.menu--open .menu__toggle__icon span{background-color:transparent !important}
+.menu--open .menu__toggle__icon span:before,.menu--open .menu__toggle__icon span:after{top:0}
+.menu--open .menu__toggle__icon span:before{-moz-transform:rotate(45deg);-o-transform:rotate(45deg);-ms-transform:rotate(45deg);-webkit-transform:rotate(45deg);transform:rotate(45deg)}
+.menu--open .menu__toggle__icon span:after{-moz-transform:rotate(-45deg);-o-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}
+.menu__wrap{position:fixed;z-index:1000;top:0;right:0;bottom:0;left:0;background:rgba(255,255,255,0.95);overflow:auto;visibility:hidden;opacity:0;-webkit-transition:all 0.2s ease-in-out;-moz-transition:all 0.2s ease-in-out;-ms-transition:all 0.2s ease-in-out;-o-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out}@media only screen and (min-width: 1024px){.menu__wrap{position:relative;background:transparent;visibility:visible;overflow:visible;opacity:1;-webkit-transition:none;-moz-transition:none;-ms-transition:none;-o-transition:none;transition:none}}
+.menu--open .menu__wrap{visibility:visible;opacity:1}.menu__list{list-style:none;margin:0 auto;padding:20px}@media only screen and (min-width: 768px){.menu__list{padding:40px 0 0;max-width:70%}}@media only screen and (min-width: 1024px){.menu__list{max-width:none;margin:0;padding:0}}@media only screen and (min-width: 1024px){.menu__list__item{display:inline-block;margin-left:20px}
+.menu__list__item:first-child{margin-left:0}}
+.menu__list__item__link{display:block;padding:0 0 8px;font-size:17px;color:#444}
+.menu__list__item__link.active-link{color:#444}
+
+
+h2 {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color:#333;
+}
+h2::after {
+  position: absolute;
+  bottom: -4px;/*テキストからの距離*/
+  left: 0;
+  content: '';
+  width: 100%;/*hover時に表示*/
+  height: 2px;/*下線の高さ*/
+  background: #444;/*下線の色*/
+  transform: scale(0, 1);/*トランス前の下線*/
+  transform-origin: left top;/*トランスフォーム開始位置*/
+  transition: transform .3s;/*アニメーション速度*/
+}
+h2:hover::after {
+  transform: scale(1, 1);/*トランス後の下線*/
+}
+
+
+.menu__list { /* 横に並べる */
+  display: flex;
+  justify-content: center;
+}
+.menu__list__item { 
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 1px 10px;
+  position: relative; /*疑似要素を親で固定*/
+  cursor: pointer;
+  padding-top: 20px;
+}
+.menu__list__item a{
+  color: #444;
+  text-decoration: none;
+}
+.menu__list__item::after {
+  position: absolute; /*疑似要素を子要素で固定*/
+  bottom: 10px; /*下線の始まりの位置 */
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #444;
+  opacity: 0;
+  visibility: hidden; /*下線を非表示*/
+  transition: all .5s; /*下線のホバーする速さ*/
+}
+.menu__list__item:hover::after { /*ホバー時に下からフェードイン*/
+  opacity: 0;
+  animation-name: fadein-bottom; /*アニメーションの名前*/
+  animation-duration: .8s; /*下線が戻る速さ*/
+  animation-timing-function: ease-out; /*アニメーションの終わりをゆっくり*/
+  animation-fill-mode: forwards;/*アニメーションが終わった状態をキープ*/
+}
+.menu__list__item:hover::after {
+  bottom: 1px; /*ホバーした時の下線の位置*/
+  visibility: visible; /*ホバーしたとき表示*/
+  font-weight: bold; /*ホバー時のフォントを太くする*/
+}
+@keyframes fadein-bottom {
+  0%{ /*アニメーションの開始の状態*/
+    opacity: 0; /*透明*/
+    transform: translateY(5px); /*下に2px分ずれた状態*/
+  }
+  100%{ /*アニメーションの終了の状態*/
+    opacity: 1; /*透過なし*/
+    transform: translateY(0);
+  }
+}
+
+.profile-photo img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease; /* 0.3秒でtransformプロパティが変化 */
+}
+
+.profile-photo img:hover {
+  transform: scale(1.1); /* マウスホバー時に1.2倍に拡大 */
+}
+
+
+.box {
+  display: -webkit-flex; /* Safari用 */
+  display: flex;
+}
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+.bg-overlay {
+  background-image: url('images/radar_fig1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;  /* 背景の薄さ調整 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* 背面に配置 */
+  pointer-events: none;
+}
+
+.header {
+  background-color: #ffffff;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: fixed; 
+  top: 0;
+  margin-top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* ヘッダーを最前面に */
+}
+
+/* メニューのトグル */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: #333;
+  margin-bottom: 5px;
+  border-radius: 3px;
+}
+
+.nav {
+  display: flex;
+  gap: 3rem;
+}
+
+.nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #887660;
+  position: relative;
+}
+
+.nav a::after {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #887660;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s;
+}
+
+.nav a:hover::after {
+  opacity: 0;
+  animation-name: fadein-bottom;
+  animation-duration: .8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  bottom: -2px;
+  visibility: visible;
+  font-weight: bold;
+}
+
+@keyframes fadein-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  padding: 0rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffffb0;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+    padding: 1rem;
+  }
+
+  .nav.show {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 0.5rem 0;
+  }
+}
