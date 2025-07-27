@@ -16,6 +16,15 @@
 .menu__list__item__link.active-link{color:#444}
 
 
+  body {
+    font-family: 'Muli', sans-serif, 'メイリオ';
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+    line-height: 1.7;
+    background-color: #dedede;
+  }
+
 h2 {
   position: relative;
   display: inline-block;
@@ -233,4 +242,37 @@ h2:hover::after {
   .nav a {
     padding: 0.5rem 0;
   }
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.title h1 {
+  animation: slideFadeIn 0.7s ease-out forwards;
+  opacity: 0; /* 初期状態 */
+}
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0.2;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0; /* 初期状態を透明に */
+  animation: fadeUp 0.7s ease-out 0.3s forwards;
 }

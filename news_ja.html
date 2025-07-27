@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>最新情報 | 細川 椿</title>
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    h1 {
+      color: #333;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #887660;
+      text-decoration: none;
+    }
+
+    .bg-overlay {
+      background-image: url('images/radar_fig1.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.08;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      pointer-events: none;
+    }
+    .scroll-box {
+      border: 1px solid #ccc;
+      background-color: rgba(237, 236, 234, 0.75);
+      padding: 1rem;
+      height: 300px;
+      overflow-y: auto;
+      border-radius: 6px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+    .news-item {
+      margin-bottom: 1rem;
+    }
+    .news-date {
+      font-weight: bold;
+      color: #555;
+    }
+  </style>
+</head>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('nav-menu').classList.toggle('show');
+  }
+</script>
+
+<body>
+<div class="bg-overlay"></div>
+
+<header class="header">
+  <div style="font-weight: bold;">
+    <a style="margin-left: 10rem;" href="index_ja.html">細川 椿</a>
+  </div>
+  <div class="menu-toggle;" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+  <nav class="nav" id="nav-menu">
+    <a href="index_ja.html">ホーム</a>
+    <a href="research_ja.html">研究</a>
+    <a href="cv_ja.html">履歴書</a>
+    <a href="news_ja.html">ニュース</a>
+  </nav>
+
+  <div class="language-switch">
+    <a href="news.html">English</a> | <a href="news_ja.html">日本語</a>
+  </div>
+</header>
+
+<div class="title">
+  <h1 style="margin-top: 3rem;">
+    最近のニュース
+  </h1>
+</div>
+
+<div class="scroll-box">
+  <div class="news-item">
+    <div class="news-date">2025年8月</div>
+    <div>ウェブサイトを公開しました。</div>
+  </div>
+  <div class="news-item">
+    <div class="news-date">2025年7月</div>
+    <div>日台合同ワークショップ（UAW2025）に参加（台北）。</div>
+  </div>
+  <div class="news-item">
+    <div class="news-date">2025年6月</div>
+    <div>AMS中規模プロセス会議（ボイジー）にて口頭発表。</div>
+  </div>
+  <div class="news-item">
+    <div class="news-date">2025年5月</div>
+    <div>博士課程の口頭試問予備審査を通過。</div>
+  </div>
+  <div class="news-item">
+    <div class="news-date">2025年2月</div>
+    <div>台風Chanthuの降水構造に関する研究をOPFGで講演。</div>
+  </div>
+  <div class="news-item">
+    <div class="news-date">2024年7月</div>
+    <div>AMS山岳気象会議（ボイジー）にて発表。</div>
+  </div>
+</div>
+
+<p><a href="index_ja.html">← ホームに戻る</a></p>
+
+<footer style="text-align: center; margin-top: 2rem; color: #777; font-size: 1rem;">
+  <p>&copy; 2025 細川 椿</p>
+</footer>
+
+</body>
+</html>

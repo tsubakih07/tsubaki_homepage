@@ -13,14 +13,6 @@
     <a href="index.html">English</a> | <a href="index_ja.html">日本語</a>
   </div>
   <style>
-    body {
-      font-family: 'Muli', sans-serif, 'メイリオ';
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-      line-height: 1.7;
-      background-color: #f8f8f8;
-    }
     h1, h2 {
       color: #444;
     }
@@ -38,6 +30,14 @@
       margin-left: 1rem;
       box-shadow: 0 0 10px rgba(58, 56, 56, 0.05);
     }
+
+    .section-transparent {
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      margin-left: 1rem;
+    }
+
     .contact-icons a {
       margin-right: 10px;
     }
@@ -100,7 +100,7 @@
 
 
 
-<header class="section" style="display: flex; align-items: center; gap: 5rem; flex-wrap: wrap;  margin-top: 3rem;">
+<header class="section-transparent fade-up " style="display: flex; align-items: center; gap: 5rem; flex-wrap: wrap;  margin-top: 3rem;">
   <div>
 	<div class="wrap" style="display: flex; align-items: center; gap: 4rem;">	
 		<div class="menu">
@@ -112,7 +112,7 @@
     <h1>Hi, I'm Tsubaki Hosokawa.</h1>
     <p>Ph.D. Candidate in Atmospheric Sciences</p>
     <p>National Taiwan University</p>
-    <p>Email: <a href="mailto:d10229006@ntu.edu.tw">d1022900❄ntu.edu.tw</a></p>
+    <p>Email: <a>d1022900❄ntu.edu.tw</a></p>
   </div>
 
   <div class="profile-photo">
@@ -204,10 +204,19 @@
         <img src="images/cat.png" style="height: 300px;">
       </div>
   </section>
-
-  <footer class="section">
-    <p>&copy; 2025 Tsubaki Hosokawa. All rights reserved.</p>
-  </footer>
-
+</section>
 </body>
+
+  <style>
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      color: #777;
+      font-size: 1rem;
+    }
+  </style>
+<footer>
+  <p>&copy; 2025 Tsubaki Hosokawa.</p>
+</footer>
+
 </html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>研究 | 細川 椿</title>
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    h1, h2 {
+      color: #444;
+    }
+    a {
+      color: #887660;
+      text-decoration: none;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    .bg-overlay {
+      background-image: url('images/radar_fig1.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.1;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      pointer-events: none;
+    }
+  </style>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-menu').classList.toggle('show');
+    }
+  </script>
+</head>
+
+<body>
+<div class="bg-overlay"></div>
+
+<header class="header">
+  <div style="font-weight: bold;">
+    <a style="margin-left: 10rem;" href="index_ja.html">細川 椿</a>
+  </div>
+  <div class="menu-toggle;" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+  <nav class="nav" id="nav-menu">
+    <a href="index_ja.html">ホーム</a>
+    <a href="research_ja.html">研究</a>
+    <a href="cv_ja.html">履歴書</a>
+    <a href="news_ja.html">ニュース</a>
+  </nav>
+  <div class="language-switch">
+    <a href="research.html">English</a> | <a href="research_ja.html">日本語</a>
+  </div>
+</header>
+
+<div class="title">
+  <h1 style="margin-top: 3rem;">研究内容</h1>
+</div>
+
+<section class="section">
+  <h2>概要</h2>
+  <p>
+    台湾や日本の山岳地形における台風に伴う極端降水および地形性降水に焦点を当てて研究しています。<br>
+    偏波ドップラーレーダー観測、雨量計、落下粒子測定器（disdrometer）などを組み合わせて、山岳地域における降水プロセスの理解を目指しています。
+  </p>
+  <p>主な関心分野は以下の通りです：</p>
+  <ul>
+    <li>台風環境下での地形性降水の強化メカニズム</li>
+    <li>偏波ドップラーレーダーによる降水の雲微物理解析</li>
+    <li>デュアルドップラー風ベクトル解析と嵐の運動場解析</li>
+    <li>降水粒子の分類と定量的降水量推定（QPE）の評価</li>
+    <li>モデルと観測の比較のための偏波レーダーオペレーターの利用</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>最近の研究プロジェクト</h2>
+  <p><strong>台風Chanthu（2021）事例解析：</strong><br>
+    台湾東部付近における偏波レーダーデータを用いて、地形性降水の特徴を解析しました。
+    背景降水の違いが地形による降水強化にどのように影響するかを明らかにし、局地的な豪雨予測への応用可能性を探っています。
+  </p>
+</section>
+
+<section class="section">
+  <h2>経験・スキル</h2>
+  <ul>
+    <li>プログラミング言語：Python、Py-ART、NCL、Fortran</li>
+    <li>デュアルドップラー風ベクトル解析</li>
+    <li>偏波レーダーを用いた降水粒子分類アルゴリズム</li>
+    <li>定量的降水量推定（QPE）の妥当性評価</li>
+    <li>偏波パラメータからの粒径分布（DSD）パラメータの推定</li>
+    <li>落下粒子測定器（disdrometer）データ解析</li>
+  </ul>
+</section>
+
+<p><a href="index_ja.html">← ホームへ戻る</a></p>
+
+<footer style="text-align: center; margin-top: 2rem; color: #777; font-size: 1rem;">
+  <p>&copy; 2025 細川 椿</p>
+</footer>
+
+</body>
+</html>
