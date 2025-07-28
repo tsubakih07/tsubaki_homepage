@@ -271,3 +271,15 @@ h2.animate-underline::after {
 .study-group p {
   margin-bottom: 1rem;
 }
+
+.iframe-container {
+  text-align: center;
+}
+
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #303a32;
+  font-weight: bold;
+}
