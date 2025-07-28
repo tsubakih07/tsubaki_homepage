@@ -1,4 +1,4 @@
-.menu__toggle__icon{float:right;position:relative;width:24px;height:20px;margin-left:8px}
+/* .menu__toggle__icon{float:right;position:relative;width:24px;height:20px;margin-left:8px}
 .menu__toggle__icon span,.menu__toggle__icon span:before,.menu__toggle__icon span:after{content:'';position:absolute;top:8px;left:0;width:100%;height:3px;-webkit-transition:all 0.1s;-moz-transition:all 0.1s;-ms-transition:all 0.1s;-o-transition:all 0.1s;transition:all 0.1s;background:#2A2F36}
 .menu__toggle__icon span:before{top:-8px}
 .menu__toggle__icon span:after{top:8px}
@@ -13,38 +13,39 @@
 .menu--open .menu__wrap{visibility:visible;opacity:1}.menu__list{list-style:none;margin:0 auto;padding:20px}@media only screen and (min-width: 768px){.menu__list{padding:40px 0 0;max-width:70%}}@media only screen and (min-width: 1024px){.menu__list{max-width:none;margin:0;padding:0}}@media only screen and (min-width: 1024px){.menu__list__item{display:inline-block;margin-left:20px}
 .menu__list__item:first-child{margin-left:0}}
 .menu__list__item__link{display:block;padding:0 0 8px;font-size:17px;color:#444}
-.menu__list__item__link.active-link{color:#444}
+.menu__list__item__link.active-link{color:#444} */
 
 
-  body {
-    font-family: 'Muli', sans-serif, 'メイリオ';
-    max-width: 900px;
-    margin: auto;
-    padding: 2rem;
-    line-height: 1.7;
-    background-color: #dedede;
-  }
+body {
+  font-family: 'Muli', sans-serif, 'メイリオ';
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  line-height: 1.7;
+  background-color: #dedede;
+}
 
 h2 {
   position: relative;
   display: inline-block;
-  text-decoration: none;
-  color:#333;
+  color: #333;
 }
+
 h2::after {
-  position: absolute;
-  bottom: -4px;/*テキストからの距離*/
-  left: 0;
   content: '';
-  width: 100%;/*hover時に表示*/
-  height: 2px;/*下線の高さ*/
-  background: #444;/*下線の色*/
-  transform: scale(0, 1);/*トランス前の下線*/
-  transform-origin: left top;/*トランスフォーム開始位置*/
-  transition: transform .3s;/*アニメーション速度*/
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #444;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-out;
 }
-h2:hover::after {
-  transform: scale(1, 1);/*トランス後の下線*/
+
+h2.animate-underline::after {
+  transform: scaleX(1);
 }
 
 
@@ -151,6 +152,8 @@ h2:hover::after {
   z-index: 1000; /* ヘッダーを最前面に */
 }
 
+
+
 /* メニューのトグル */
 .menu-toggle {
   display: none;
@@ -201,6 +204,7 @@ h2:hover::after {
   font-weight: bold;
 }
 
+
 @keyframes fadein-bottom {
   0% {
     opacity: 0;
@@ -218,21 +222,26 @@ h2:hover::after {
   margin: auto;
 }
 
+
+/* メニューを隠す & 表示切替 */
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
   }
 
   .nav {
+    display: none;
+    flex-direction: column;
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     position: absolute;
     top: 100%;
     left: 0;
-    background: #ffffffb0;
     width: 100%;
-    flex-direction: column;
     align-items: flex-start;
-    display: none;
-    padding: 1rem;
+    z-index: 1000; /* メニューを最前面に */
   }
 
   .nav.show {
@@ -256,7 +265,7 @@ h2:hover::after {
 }
 
 .title h1 {
-  animation: slideFadeIn 0.7s ease-out forwards;
+  animation: slideFadeIn 0.5s ease-out forwards;
   opacity: 0; /* 初期状態 */
 }
 

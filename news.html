@@ -19,7 +19,7 @@
     }
     a {
       color: #887660;
-      text-decoration: none;
+      text-decoration: underline;
     }
 
     .bg-overlay {
@@ -66,8 +66,8 @@
 
 <header class="header">
   <div style="font-weight: bold;">
-    <a style="margin-left: 10rem;" href="index.html">Tsubaki Hosokawa</a></div>
-  <div class="menu-toggle;" onclick="toggleMenu()">
+    <a href="index.html" style="text-decoration: none;">Tsubaki Hosokawa</a></div>
+  <div class="menu-toggle" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </div>
   <nav class="nav" id="nav-menu">
@@ -75,11 +75,11 @@
     <a href="research.html">Research</a>
     <a href="cv.html">CV</a>
     <a href="news.html">News</a>
-  </nav>
-
     <div class="language-switch">
       <a href="news.html">English</a> | <a href="news_ja.html">日本語</a>
     </div>
+  </nav>
+
 </header>
 
 <script>
@@ -114,7 +114,7 @@
   </div>
   <div class="news-item">
     <div class="news-date">February 2025</div>
-    <div>Gave a talk at OPFG on Typhoon Chanthu precipitation structure.</div>
+    <div>Gave a talk at <a href="https://www.eorc.jaxa.jp/IPWG/FG1/index.html" target="_blank">IPWG-OPFG</a> on the case study of Typhoon Chanthu.</div>
   </div>
   <div class="news-item">
     <div class="news-date">July 2024</div>
@@ -138,4 +138,6 @@
 </footer>
 
 </body>
+
+<script src="javascript.js"></script>
 </html>

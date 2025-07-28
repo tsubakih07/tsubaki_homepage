@@ -22,7 +22,7 @@
     }
     a {
       color: #887660;
-      text-decoration: none;
+      text-decoration: underline;
     }
     .bg-overlay {
       background-image: url('images/radar_fig1.png');
@@ -52,8 +52,8 @@
 
 <header class="header">
   <div style="font-weight: bold;">
-    <a style="margin-left: 10rem;" href="index.html">Tsubaki Hosokawa</a></div>
-  <div class="menu-toggle;" onclick="toggleMenu()">
+    <a href="index.html" style="text-decoration: none;">Tsubaki Hosokawa</a></div>
+  <div class="menu-toggle" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </div>
   <nav class="nav" id="nav-menu">
@@ -61,10 +61,10 @@
     <a href="research.html">Research</a>
     <a href="cv.html">CV</a>
     <a href="news.html">News</a>
-  </nav>
     <div class="language-switch">
       <a href="cv.html">English</a> | <a href="cv_ja.html">日本語</a>
     </div>
+  </nav>
 </header>
 
 <script>
@@ -86,7 +86,7 @@ Email: <a>d10229006❄ntu.edu.tw</a><br>
 </section>
 
 
-<section class="section">
+<section class="section" id="education">
 <h2>Education</h2>
 <ul>
   <li><strong>Ph.D. in Atmospheric Sciences</strong>, National Taiwan University, Sep 2021 – Present<br>
@@ -101,31 +101,50 @@ Email: <a>d10229006❄ntu.edu.tw</a><br>
 </ul>
 </section>
 
-<section class="section">
+<section class="section" id="publication">
 <h2>Peer-Reviewed Publication</h2>
 <ul>
   <li>Hosokawa, T. and C.-K. Yu, 2025: Kinematics and Microphysics of Orographic Precipitation Associated with Different Background Precipitation of Typhoon Chanthu (2021), <em>J. Atmos. Sci.</em>, under review.</li>
 </ul>
 </section>
 
-<section class="section">
+<section class="section" id="awards">
 <h2>Awards</h2>
 <ul>
-  <li>Outstanding Presentation Award, AMS Conference on Mountain Meteorology, 2024</li>
-  <li>Outstanding Student Presentation Award, ICMCS-XV, 2023</li>
-  <li>Best Student Poster Award, AOGS, 2022</li>
-  <li>Best Student Presentation Award, ICMCS-XIV, 2021</li>
+  <li>
+    <a href="https://ams.confex.com/ams/21MOUNTAIN/meetingapp.cgi/Index/StudentAwardWinner~1" target="_blank">
+      Outstanding Presentation Award, AMS Conference on Mountain Meteorology, 2024</a>
+  </li>
+  <li>
+    <a href="https://icmcs15.colostate.edu/student_award_winners/" target="_blank">
+      Outstanding Student Presentation Award, ICMCS-XV, 2023</a>
+  </li>
+  <li>
+    <a href="https://www.asiaoceania.org/society/public.asp?page=best_student_poster_2022.asp" target="_blank">
+      Best Student Poster Award, AOGS, 2022</a>
+  </li>
+  <li>
+    <a href="https://icmcs14.nju.edu.cn/News/20210521/i200568.html" target="_blank">
+      Best Student Presentation Award, ICMCS-XIV, 2021</a>
+  </li>
 </ul>
 </section>
 
-<section class="section">
-<h2>Conference Presentations (Selected)</h2>
+<section class="section" id="conference">
+<h2>Conference Presentations</h2>
 <ul>
+  <ol>
   <li>AMS 21st Conference on Mesoscale Processes, Boise, USA, 2025</li>
   <li>AMS 21st Mountain Meteorology Conference, Boise, USA, 2024</li>
-  <li>AOGS Annual Meeting, Pyeongchang, Korea, 2024</li>
-  <li>ICMCS-XV, Colorado, USA (online), 2023</li>
+  <li>AOGS2024 Annual Meeting, Pyeongchang, Korea, 2024</li>
+  <li>AOGS2023 Annual Meeting, Singapore, 2023</li>
+  <li>ICMCS-XV, Colorado, USA (Online), 2023</li>
+  <li>AOGS2022 Annual Meeting, Online, 2022</li>
+  <li>AOGS2021 Annual Meeting, Online, 2021</li>
+  <li>ICMCS-XIV, Nangjing, China (online), 2021</li>
   <li>MSJ Autumn Meeting, Japan, 2020</li>
+  <li>ICMCS-XIII, Okinawa, Japan, 2019</li>
+  </ol>
 </ul>
 </section>
 
@@ -133,7 +152,10 @@ Email: <a>d10229006❄ntu.edu.tw</a><br>
 <h2>Grants</h2>
 <ul>
   <li>NTU Outstanding International Graduate Student Scholarship (2021–2025)</li>
-  <li>Tobitate! (Leap for Tomorrow) Study Abroad Initiative, MEXT Japan (2018–2019)</li>
+  <li>
+    <a href="https://tobitate-mext.jasso.go.jp/zukan/detail-2159.html" target="_blank">
+      MEXT Tobitate! (Leap for Tomorrow) Study Abroad Initiative, 2018–2019</a>
+  </li>
 </ul>
 </section>
 
@@ -142,7 +164,7 @@ Email: <a>d10229006❄ntu.edu.tw</a><br>
 <ul>
   <li>Teaching Assistant, Synoptic Meteorology Lab II, NTU (2022–2025)</li>
   <li>Research Visiting Student, Mesoscale Lab (P3 Lab), NTU (2018–2019)</li>
-  <li>Research Intern, Okinawa Institute of Science and Technology (2018–2019)</li>
+  <li>Research Intern, Okinawa Institute of Science and Technology (2018)</li>
 </ul>
 </section>
 
@@ -181,5 +203,6 @@ Email: <a>d10229006❄ntu.edu.tw</a><br>
   <p>&copy; 2025 Tsubaki Hosokawa.</p>
 </footer>
 
+<script src="javascript.js"></script>
 </body>
 </html>

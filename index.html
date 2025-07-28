@@ -67,6 +67,7 @@
   }
 
   </style>
+
 </head>
 
 <body>
@@ -74,10 +75,11 @@
 <div class="bg-overlay"></div>
 
 <header class="header">
-  <div style="font-weight: bold;">
-    <a style="margin-left: 10rem;" href="index.html">Tsubaki Hosokawa</a></div>
-    
-    <div class="menu-toggle;" onclick="toggleMenu()">
+  <div class="site-title" style="font-weight: bold;">
+    <a href="index.html">Tsubaki Hosokawa</a>
+  </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </div>
     <nav class="nav" id="nav-menu">
@@ -85,11 +87,11 @@
       <a href="research.html">Research</a>
       <a href="cv.html">CV</a>
       <a href="news.html">News</a>
+      <div class="language-switch">
+        <a href="index.html">English</a> | <a href="index_ja.html">日本語</a>
+      </div>
     </nav>
 
-    <div class="language-switch">
-      <a href="index.html">English</a> | <a href="index_ja.html">日本語</a>
-    </div>
 </header>
 
 <script>
@@ -128,7 +130,7 @@
       I use polarimetric Doppler radar observations, rain gauges, and Parsivel disdrometers to investigate precipitation microphysics and dynamics.
       I am originally from Okinawa, Japan.</p>
   <section class="section">
-    <h2>Recent Publications</h2>
+    <h2><a href="cv.html#publication">Recent Publications</a></h2>
     <ul>
       <li>
         <strong>Hosokawa, T.</strong> and C.-K. Yu, 2025: Kinematics and Microphysics of Orographic Precipitation Associated with Different Background Precipitation of Typhoon Chanthu (2021), <em>J. Atmos. Sci.</em>, under review.
@@ -137,7 +139,7 @@
   </section>
 
   <section class="section">
-    <h2>Awards</h2>
+    <h2><a href="cv.html#awards">Awards</a></h2>
     <ul>
       <li>Outstanding Presentation Award, AMS 21st Conference on Mountain Meteorology (2024)</li>
       <li>Outstanding Student Presentation Award, ICMCS-XV (2023)</li>
@@ -147,7 +149,7 @@
   </section>
 
   <section class="section">
-    <h2>Education</h2>
+    <h2><a href="cv.html#education">Education</a></h2>
     <ul>
       <li><strong>Ph.D. in Atmospheric Science</strong>, National Taiwan University (Sep 2021 – present)</li>
       <li><strong>M.S. in Science</strong>, University of the Ryukyus (Apr 2018 – Mar 2021)</li>
@@ -156,7 +158,7 @@
   </section>
 
   <section class="section">
-    <h2>Conference Presentations (Selected)</h2>
+    <h2><a href="cv.html#conference">Conference Presentations (Selected)</a></h2>
     <ul>
       <li>AMS 21st Conference on Mesoscale Processes, Boise, USA, Jun 2025</li>
       <li>AMS 21st Conference on Mountain Meteorology, Boise, USA, Jul 2024</li>
@@ -205,7 +207,6 @@
       </div>
   </section>
 </section>
-</body>
 
   <style>
     footer {
@@ -218,5 +219,8 @@
 <footer>
   <p>&copy; 2025 Tsubaki Hosokawa.</p>
 </footer>
+
+<script src="javascript.js"></script>
+</body>
 
 </html>

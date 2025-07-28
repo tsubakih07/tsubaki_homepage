@@ -18,7 +18,7 @@
     }
     a {
       color: #887660;
-      text-decoration: none;
+      text-decoration: underline;
     }
 
     .bg-overlay {
@@ -65,21 +65,21 @@
 
 <header class="header">
   <div style="font-weight: bold;">
-    <a style="margin-left: 10rem;" href="index_ja.html">細川 椿</a>
+    <a href="index_ja.html"  style="text-decoration: none;">Tsubaki Hosokawa</a>
   </div>
-  <div class="menu-toggle;" onclick="toggleMenu()">
+  <div class="menu-toggle" onclick="toggleMenu()">
     <span></span><span></span><span></span>
   </div>
   <nav class="nav" id="nav-menu">
-    <a href="index_ja.html">ホーム</a>
-    <a href="research_ja.html">研究</a>
-    <a href="cv_ja.html">履歴書</a>
-    <a href="news_ja.html">ニュース</a>
+      <a href="index_ja.html">Home</a>
+      <a href="research_ja.html">Research</a>
+      <a href="cv_ja.html">CV</a>
+      <a href="news_ja.html">News</a>
+    <div class="language-switch">
+      <a href="news.html">English</a> | <a href="news_ja.html">日本語</a>
+    </div>
   </nav>
 
-  <div class="language-switch">
-    <a href="news.html">English</a> | <a href="news_ja.html">日本語</a>
-  </div>
 </header>
 
 <div class="title">
@@ -95,7 +95,7 @@
   </div>
   <div class="news-item">
     <div class="news-date">2025年7月</div>
-    <div>日台合同ワークショップ（UAW2025）に参加（台北）。</div>
+    <div>国立台湾大学ー東京大学ー東北大学合同ワークショップ（UAW2025）に参加（台北）。</div>
   </div>
   <div class="news-item">
     <div class="news-date">2025年6月</div>
@@ -107,7 +107,7 @@
   </div>
   <div class="news-item">
     <div class="news-date">2025年2月</div>
-    <div>台風Chanthuの降水構造に関する研究をOPFGで講演。</div>
+    <div>台風Chanthuの地形性降水に関する研究を<a href="https://www.eorc.jaxa.jp/IPWG/FG1/index.html" target="_blank">IPWG-OPFG</a>で講演。</div>
   </div>
   <div class="news-item">
     <div class="news-date">2024年7月</div>
@@ -118,8 +118,9 @@
 <p><a href="index_ja.html">← ホームに戻る</a></p>
 
 <footer style="text-align: center; margin-top: 2rem; color: #777; font-size: 1rem;">
-  <p>&copy; 2025 細川 椿</p>
+  <p>&copy; 2025 Tsubaki Hosokawa</p>
 </footer>
 
+<script src="javascript.js"></script>
 </body>
 </html>
