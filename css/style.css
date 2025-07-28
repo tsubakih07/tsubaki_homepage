@@ -262,3 +262,12 @@ h2.animate-underline::after {
   opacity: 0; /* 初期状態を透明に */
   animation: fadeUp 0.7s ease-out 0.3s forwards;
 }
+
+.study-group h3 {
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.study-group p {
+  margin-bottom: 1rem;
+}
