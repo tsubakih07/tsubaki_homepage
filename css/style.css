@@ -129,22 +129,6 @@ h2.animate-underline::after {
   z-index: 1000; /* ヘッダーを最前面に */
 }
 
-
-
-/* メニューのトグル
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-.menu-toggle span {
-  height: 3px;
-  width: 25px;
-  background: #333;
-  margin-bottom: 5px;
-  border-radius: 3px;
-}
-
 /*=============================
 .menu-toggle
 =============================*/
@@ -201,7 +185,9 @@ h2.animate-underline::after {
 
 .nav {
   display: flex;
-  gap: 3rem;
+  gap: 2.5rem;
+  align-items: center; /* ← 中央寄せに変更 */
+  text-align: center;   /* ← テキストも中央寄せ */
 }
 
 .nav a {
@@ -209,6 +195,7 @@ h2.animate-underline::after {
   font-weight: 600;
   color: #887660;
   position: relative;
+  /* width: 100%;         ← 必要に応じて横幅も調整可能 */
 }
 
 .nav a::after {
@@ -265,17 +252,20 @@ h2.animate-underline::after {
     flex-direction: column;
     background: #ffffff;
     padding: 1rem;
-    border-radius: 6px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     align-items: flex-start;
     z-index: 1000; /* メニューを最前面に */
+    align-items: center; /* ← 中央寄せに変更 */
+    text-align: center;   /* ← テキストも中央寄せ */
   }
 
-  .nav.show {
+
+  .nav.showing {
     display: flex;
   }
 
@@ -284,6 +274,7 @@ h2.animate-underline::after {
   }
 }
 
+/* アニメーションの追加 */
 @keyframes slideFadeIn {
   from {
     opacity: 0;
@@ -312,6 +303,39 @@ h2.animate-underline::after {
   }
 }
 
+@keyframes slideDownFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* アニメーション状態クラス */
+.nav.showing {
+  animation: slideDownFade 0.4s ease-out forwards;
+}
+
+.nav.hiding {
+  animation: slideUpFade 0.3s ease-in forwards;
+}
+
+
+
 .fade-up {
   opacity: 0; /* 初期状態を透明に */
   animation: fadeUp 0.7s ease-out 0.3s forwards;
@@ -338,4 +362,44 @@ h3 {
   font-weight: bold;
 }
 
+hobbies-photo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+
+
+/* Research project枠 */
+.project-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.project-image {
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.project-text {
+  flex: 2;
+  min-width: 300px;
+}
+
+.project-text h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 1.2rem;
+}
 
