@@ -131,7 +131,7 @@ h2.animate-underline::after {
 
 
 
-/* メニューのトグル */
+/* メニューのトグル
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -144,6 +144,54 @@ h2.animate-underline::after {
   margin-bottom: 5px;
   border-radius: 3px;
 }
+
+/*=============================
+.menu-toggle
+=============================*/
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+}
+.menu-toggle span {
+  display: inline-block;
+  height: 3px;
+  width: 25px;
+  background: #333;
+  margin-bottom: 5px;
+  border-radius: 1px;
+}
+
+.menu-toggle, .menu-toggle span {
+  transition: all .5s;
+  box-sizing: border-box;
+}
+.menu-toggle span:nth-of-type(1) {
+  top: 0;
+}
+.menu-toggle span:nth-of-type(2) {
+  top: 20px;
+}
+.menu-toggle span:nth-of-type(3) {
+  bottom: 0;
+}
+
+/*=============================
+#btn hamburger menu
+=============================*/
+#btn.active span:nth-of-type(1) {
+  -webkit-transform: translateY(0.5rem) rotate(-315deg);
+  transform: translateY(0.5rem) rotate(-315deg);
+}
+#btn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+#btn.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-0.5rem) rotate(315deg);
+  transform: translateY(-0.5rem) rotate(315deg);
+}
+
 
 .nav {
   display: flex;
@@ -283,3 +331,5 @@ h3 {
   color: #303a32;
   font-weight: bold;
 }
+
+

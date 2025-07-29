@@ -34,12 +34,6 @@
       pointer-events: none;
     }
   </style>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById('nav-menu').classList.toggle('show');
-    }
-  </script>
 </head>
 
 <body>
@@ -49,7 +43,7 @@
   <div style="font-weight: bold;">
     <a href="index_ja.html">Tsubaki Hosokawa</a>
   </div>
-  <div class="menu-toggle" onclick="toggleMenu()">
+  <div class="menu-toggle" onclick="toggleMenu()" id="btn">
     <span></span><span></span><span></span>
   </div>
   <nav class="nav" id="nav-menu">
@@ -57,9 +51,9 @@
     <a href="research_ja.html">Research</a>
     <a href="cv_ja.html">CV</a>
     <a href="news_ja.html">News</a>
-    <div class="language-switch">
-      <a href="research.html">English</a> | <a href="research_ja.html">日本語</a>
-    </div>
+    <span class="language-switch">
+    <a href="research.html">English</a> | <a href="research_ja.html">日本語</a>
+    </span>
   </nav>
 </header>
 

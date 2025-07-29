@@ -8,9 +8,6 @@
   <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <div class="language-switch">
-    <a href="index.html">English</a> | <a href="index_ja.html">日本語</a>
-  </div>
   <style>
     h1, h2 {
       color: #444;
@@ -78,7 +75,7 @@
     <a href="index.html">Tsubaki Hosokawa</a>
   </div>
 
-    <div class="menu-toggle" onclick="toggleMenu()">
+    <div class="menu-toggle" onclick="toggleMenu()" id="btn">
       <span></span><span></span><span></span>
     </div>
     <nav class="nav" id="nav-menu">
@@ -86,19 +83,12 @@
       <a href="research.html">Research</a>
       <a href="cv.html">CV</a>
       <a href="news.html">News</a>
-      <div class="language-switch">
+      <span class="language-switch">
         <a href="index.html">English</a> | <a href="index_ja.html">日本語</a>
-      </div>
+      </span>
     </nav>
-
-</header>
-
-<script>
-  function toggleMenu() {
-    document.getElementById('nav-menu').classList.toggle('show');
-  }
-</script>
-
+    
+  </header>
 
 
 <header class="section-transparent fade-up " style="display: flex; align-items: center; gap: 5rem; flex-wrap: wrap;  margin-top: 3rem;">

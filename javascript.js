@@ -24,7 +24,19 @@ document.addEventListener("DOMContentLoaded", () => {
   headers.forEach(h => observer.observe(h));
 });
 
+
 // ハンバーガーメニューの表示切替
 function toggleMenu() {
   document.getElementById('nav-menu').classList.toggle('show');
 }
+
+// ボタンのトグルアクション
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggles = document.querySelectorAll('.menu-toggle');
+  menuToggles.forEach(function(toggle) {
+    toggle.addEventListener('click', function(e) {
+      this.classList.toggle('active');
+      e.preventDefault();
+    });
+  });
+});
