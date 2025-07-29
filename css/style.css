@@ -151,16 +151,22 @@ h2.animate-underline::after {
 .menu-toggle {
   display: none;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  height: 2rem;
+  width:  2rem;
   position: relative;
 }
 .menu-toggle span {
-  display: inline-block;
-  height: 3px;
-  width: 25px;
+  display: block;
+  height: 0.25rem;
+  width: 100%;
   background: #333;
-  margin-bottom: 5px;
-  border-radius: 1px;
+  margin: 0.25rem 0;
+  border-radius: 0.1rem;
+  transition: all 0.4s ease-in-out;
+  position: relative;
 }
 
 .menu-toggle, .menu-toggle span {
@@ -168,28 +174,28 @@ h2.animate-underline::after {
   box-sizing: border-box;
 }
 .menu-toggle span:nth-of-type(1) {
-  top: 0;
+  top: 0rem;
 }
 .menu-toggle span:nth-of-type(2) {
-  top: 20px;
+  top: 0.0125rem;
 }
 .menu-toggle span:nth-of-type(3) {
-  bottom: 0;
+  bottom: 0rem;
 }
 
 /*=============================
 #btn hamburger menu
 =============================*/
 #btn.active span:nth-of-type(1) {
-  -webkit-transform: translateY(0.5rem) rotate(-315deg);
-  transform: translateY(0.5rem) rotate(-315deg);
+  -webkit-transform: translateY(0.65rem) rotate(-315deg);
+  transform: translateY(0.65rem) rotate(-315deg);
 }
 #btn.active span:nth-of-type(2) {
   opacity: 0;
 }
 #btn.active span:nth-of-type(3) {
-  -webkit-transform: translateY(-0.5rem) rotate(315deg);
-  transform: translateY(-0.5rem) rotate(315deg);
+  -webkit-transform: translateY(-0.65rem) rotate(315deg);
+  transform: translateY(-0.65rem) rotate(315deg);
 }
 
 
