@@ -7,6 +7,7 @@ body {
   background-color: #dedede;
 }
 
+/* title with a sliding underline */
 h2 {
   position: relative;
   display: inline-block;
@@ -30,6 +31,21 @@ h2.animate-underline::after {
   transform: scaleX(1);
 }
 
+/* header with menu */
+.header {
+  background-color: #ffffff;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: fixed; 
+  top: 0;
+  margin-top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* ヘッダーを最前面に */
+}
 
 .menu__list { /* 横に並べる */
   display: flex;
@@ -112,21 +128,6 @@ h2.animate-underline::after {
   height: 100vh;
   z-index: -1; /* 背面に配置 */
   pointer-events: none;
-}
-
-.header {
-  background-color: #ffffff;
-  padding: 1rem 3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  position: fixed; 
-  top: 0;
-  margin-top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000; /* ヘッダーを最前面に */
 }
 
 /*=============================
@@ -362,14 +363,28 @@ h3 {
   font-weight: bold;
 }
 
-hobbies-photo {
+.hobbies-container {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
 }
-
-
+.hobbies-list {
+  flex: 1 1 300px;
+}
+@media (max-width: 800px) {
+  .hobbies-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hobbies-photo {
+    margin-left: 0;
+    margin-top: 0;
+    align-self: center;
+    height: 300px;
+    width : auto;
+  }
+}
 
 /* Research project枠 */
 .project-container {
@@ -402,4 +417,3 @@ hobbies-photo {
   color: #444;
   font-size: 1.2rem;
 }
-
