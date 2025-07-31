@@ -45,6 +45,7 @@ h2.animate-underline::after {
   left: 0;
   right: 0;
   z-index: 1000; /* ヘッダーを最前面に */
+  height: 2.5rem; /* ← これが明示的な高さの指定 */
 }
 
 .menu__list { /* 横に並べる */
@@ -189,6 +190,7 @@ h2.animate-underline::after {
   gap: 2.5rem;
   align-items: center; /* ← 中央寄せに変更 */
   text-align: center;   /* ← テキストも中央寄せ */
+  max-height: 100vh;
 }
 
 .nav a {
@@ -263,6 +265,8 @@ h2.animate-underline::after {
     z-index: 1000; /* メニューを最前面に */
     align-items: center; /* ← 中央寄せに変更 */
     text-align: center;   /* ← テキストも中央寄せ */
+    max-height: calc(100vh - 6rem - 1.5rem); /* menu項目数を考慮 */
+    overflow-y: auto;
   }
 
 
