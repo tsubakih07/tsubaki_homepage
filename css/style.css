@@ -392,18 +392,20 @@ h3 {
   gap: 2rem;
   margin-top: 2rem;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .project-image {
   flex: 1;
   min-width: 250px;
   max-width: 400px;
+  /* align-items: center; */
 }
 
 .project-image img {
-  width: 100%;
+  width: 300px;
   height: auto;
-  border-radius: 8px;
+  border-radius: 5px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
