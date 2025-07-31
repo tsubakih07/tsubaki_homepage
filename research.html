@@ -18,7 +18,7 @@
     }
     a {
       color: #887660;
-      text-decoration: none;
+      text-decoration: underline;
     }
 
     .bg-overlay {
@@ -44,7 +44,7 @@
 
 <header class="header">
   <div style="font-weight: bold;">
-    <a href="index.html">Tsubaki Hosokawa</a></div>
+    <a href="index.html" style="text-decoration: none;">Tsubaki Hosokawa</a></div>
   <div class="menu-toggle" onclick="toggleMenu()" id="btn">
     <span></span><span></span><span></span>
   </div>
@@ -53,6 +53,7 @@
     <a href="research.html">Research</a>
     <a href="cv.html">CV</a>
     <a href="news.html">News</a>
+    <a href="contact.html">Contact</a>
     <span class="language-switch">
     <a href="research.html">English</a> | <a href="research_ja.html">日本語</a>
     </span>
@@ -65,7 +66,7 @@
 
 <section class="section">
   <h2>Overview</h2>
-  <p>My research focuses on orographic precipitation and extreme rainfall associated with tropical cyclones in Taiwan. I combine polarimetric radar observations, rain gauges, and disdrometer observations to understand precipitation processes in mountainous regions.
+  <p>My research focuses on orographic precipitation and extreme rainfall in Taiwan associated with a tropical cyclone. I combine polarimetric radar observations, rain gauges, and disdrometer observations to understand precipitation processes in mountainous regions.
     I am generally interested in the following topics:
     <ul>
       <li>Orographic enhancement of rainfall in tropical cyclone environments</li>
@@ -78,8 +79,8 @@
 
 <section class="section">
   <h2>Recent Projects</h2>
+  <div>
   <h3>Case Study of Typhoon Chanthu (2021)</h3>
-  
   <div class="project-container">
     <div class="project-image">
       <img src="images/movie.gif" alt="Movie of shallow convection" />
@@ -101,6 +102,7 @@
       We provide observational evidence of the seeder-feeder effect associated with orographic precipitation over the isolated Da-Tun Mountain in northern Taiwan, under the influence of Typhoon Chanthu’s outer rainbands and stratiform background precipitation. 
       This study clarifies how differences in background precipitation modulate terrain-induced precipitation enhancement, with implications for improving the prediction of localized heavy rainfall events.</p>
     </div>
+  </div>
   </div>
 </section>
 
@@ -146,18 +148,10 @@
 
   <p><a href="index.html">← Back to Home</a></p>
 
-  <style>
-    footer {
-      text-align: center;
-      margin-top: 2rem;
-      color: #777;
-      font-size: 1rem;
-    }
-  </style>
-<footer>
-  <p>&copy; 2025 Tsubaki Hosokawa.</p>
+<footer style="text-align: center; margin-top: 2rem; color: #777; font-size: 1rem;">
+  <p>&copy; 2025 Tsubaki Hosokawa</p>
 </footer>
 
-</body>
 <script src="js/script.js"></script>
+</body>
 </html>

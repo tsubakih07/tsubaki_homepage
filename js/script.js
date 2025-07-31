@@ -51,4 +51,16 @@ function toggleMenu() {
   }
 }
 
+// ウィンドウサイズ変更時に nav メニューをリセット
+window.addEventListener('resize', () => {
+  const nav = document.getElementById('nav-menu');
+  const btn = document.getElementById('btn');
+
+  // 768px 以上（PCサイズ）に戻ったら nav の display をリセット
+  if (window.innerWidth >= 768) {
+    nav.style.display = '';
+    nav.classList.remove('showing', 'hiding');
+    btn.classList.remove('active');
+  }
+});
 

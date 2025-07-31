@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>お問い合わせ | 細川 椿</title>
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    h1 {
+      color: #333;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #887660;
+      text-decoration: underline;
+    }
+
+    .bg-overlay {
+      background-image: url('images/radar_fig1.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.08;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      pointer-events: none;
+    }
+    .scroll-box {
+      border: 1px solid #ccc;
+      background-color: rgba(237, 236, 234, 0.75);
+      padding: 1rem;
+      height: 300px;
+      overflow-y: auto;
+      border-radius: 6px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+
+<body>
+<div class="bg-overlay"></div>
+
+<header class="header">
+  <div style="font-weight: bold;">
+    <a href="index_ja.html" style="text-decoration: none;">Tsubaki Hosokawa</a>
+  </div>
+  <div class="menu-toggle" onclick="toggleMenu()" id="btn">
+    <span></span><span></span><span></span>
+  </div>
+  <nav class="nav" id="nav-menu">
+    <a href="index_ja.html">Home</a>
+    <a href="research_ja.html">Research</a>
+    <a href="cv_ja.html">CV</a>
+    <a href="news_ja.html">News</a>
+    <a href="contact_ja.html">Contact</a>
+    <span class="language-switch">
+      <a href="contact.html">English</a> | <a href="contact_ja.html">日本語</a>
+    </span>
+  </nav>
+</header>
+
+<div class="title">
+  <h1 style="margin-top: 3rem;">お問い合わせ</h1>
+</div>
+
+<section class="section" id="contact">
+  <p>ご質問・ご連絡等ありましたら、以下のフォームにご記入ください。</p>
+  <iframe 
+    src="https://docs.google.com/forms/d/e/1FAIpQLSeB9xzXNqwZvrQLl9Q4tn2aS7ebzdXtRZwFqkhmF7db74zXIg/viewform?embedded=true" 
+    width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">
+    読み込んでいます…
+  </iframe>
+</section>
+
+<p><a href="index_ja.html">← ホームに戻る</a></p>
+
+<footer style="text-align: center; margin-top: 2rem; color: #777; font-size: 1rem;">
+  <p>&copy; 2025 Tsubaki Hosokawa</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

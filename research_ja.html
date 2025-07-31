@@ -14,7 +14,7 @@
     }
     a {
       color: #887660;
-      text-decoration: none;
+      text-decoration: underline;
     }
     ul {
       padding-left: 1.5rem;
@@ -41,7 +41,7 @@
 
 <header class="header">
   <div style="font-weight: bold;">
-    <a href="index_ja.html">Tsubaki Hosokawa</a>
+    <a href="index_ja.html" style="text-decoration: none;">Tsubaki Hosokawa</a>
   </div>
   <div class="menu-toggle" onclick="toggleMenu()" id="btn">
     <span></span><span></span><span></span>
@@ -51,6 +51,7 @@
     <a href="research_ja.html">Research</a>
     <a href="cv_ja.html">CV</a>
     <a href="news_ja.html">News</a>
+    <a href="contact_ja.html">Contact</a>
     <span class="language-switch">
     <a href="research.html">English</a> | <a href="research_ja.html">日本語</a>
     </span>
@@ -79,6 +80,7 @@
 
 <section class="section">
   <h2>最近の研究プロジェクト</h2>
+  <div>
   <h3>台風Chanthu（2021）事例解析</h3>
   <div class="project-container">
     <div class="project-image">
@@ -86,11 +88,10 @@
     </div>
     <div class="project-text">
       <p><strong>孤立した浅い対流雲の降水強化過程</strong><br>
-      Chanthuの中心から100 km以上離れた領域で発生した浅い対流雲が台湾北部の孤立山岳Da-Tun Mountainを通過する際に地形上で強化される様子を調査しています。
+        台風Chanthuの中心から100 km以上離れた領域で発生した浅い対流雲が台湾北部の孤立山岳Da-Tun Mountainを通過する際に地形上で強化される様子を調査しています。
         Seeder-feeder効果とは異なるメカニズムで降水強化が起こっている可能性があり、観測データを用いてそのメカニズムを解明しようとしています。
       </p>
     </div>
-
 
   <div class="project-container">
     <div class="project-image">
@@ -103,6 +104,8 @@
       </p>
     </div>
   </div>
+</div>
+
 </section>
 
 
@@ -149,7 +152,7 @@
   <p>&copy; 2025 Tsubaki Hosokawa</p>
 </footer>
 
+<script src="js/script.js"></script>
 </body>
 
-<script src="js/script.js"></script>
 </html>
