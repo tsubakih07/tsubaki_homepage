@@ -276,6 +276,7 @@ h2.animate-underline::after {
 
   .nav a {
     padding: 0.5rem 0;
+    font-weight: 600;
   }
 }
 
