@@ -423,3 +423,8 @@ h3 {
   color: #444;
   font-size: 1.2rem;
 }
+
+.news-yyyy-mm-dd {
+  font-size: 0.9rem;
+  color: #555;
+}
