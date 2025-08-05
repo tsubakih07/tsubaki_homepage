@@ -142,7 +142,7 @@ h2.animate-underline {
   text-align: left;
   color: #333;
   font-size: 1rem;
-  padding: 0.1rem 0;
+  /* padding: 0.1rem 0; */
 }
 
 .intro-text p {
@@ -151,7 +151,7 @@ h2.animate-underline {
   background: linear-gradient(transparent 45%,  #ffffffb1 20%);
   /* display: inline-block; */
   font-weight: 600;
-  word-break: break-all; /* または word-break: keep-all; */
+  word-break: keep-all; /* または word-break: keep-all; */
   display: inline;
 }
 
