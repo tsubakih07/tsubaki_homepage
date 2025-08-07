@@ -1,0 +1,40 @@
+<header class="header">
+  <div class="site-title">
+    {% if page.lang == 'ja' %}
+      <a href="{{ '/index_ja.html' | relative_url }}">
+      Tsubaki Hosokawa
+      <img src="{{ '/assets/images/favicon.ico' | relative_url }}" alt="icon" style="height: 1.5rem; margin-left: 0.1rem;">
+      </a>
+    {% else %}
+      <a href="{{ '/' | relative_url }}">
+      Tsubaki Hosokawa
+      <img src="{{ '/assets/images/favicon.ico' | relative_url }}" alt="icon" style="height: 1.5rem; margin-left: 0.1rem;">
+      </a>
+    {% endif %}
+  </div>
+  <div class="menu-toggle" onclick="toggleMenu()" id="btn">
+    <span></span><span></span><span></span>
+  </div>
+
+  <nav class="nav" id="nav-menu">
+    {% if page.lang == 'ja' %}
+      <a href="{{ '/index_ja.html' | relative_url }}">Home</a>
+      <a href="{{ '/research_ja.html' | relative_url }}">Research</a>
+      <a href="{{ '/cv_ja.html' | relative_url }}">CV</a>
+      <a href="{{ '/news_ja.html' | relative_url }}">News</a>
+      <a href="{{ '/contact_ja.html' | relative_url }}">Contact</a>
+    {% else %}
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/research.html' | relative_url }}">Research</a>
+      <a href="{{ '/cv.html' | relative_url }}">CV</a>
+      <a href="{{ '/news.html' | relative_url }}">News</a>
+      <a href="{{ '/contact.html' | relative_url }}">Contact</a>
+    {% endif %}
+
+    <span class="language-switch">
+      <a href="{{ page.lang_link_en }}">English</a> | <a href="{{ page.lang_link_ja }}">日本語</a>
+    </span>
+  </nav>
+</header>
+
+<script src="{{ '/assets/js/script.js' | relative_url }}"></script>

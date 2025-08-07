@@ -1,0 +1,61 @@
+---
+layout: default
+title: Research | Tsubaki Hosokawa
+lang_link_en: /research.html
+lang_link_ja: /research_ja.html
+permalink: /research.html
+css : /assets/css/style.css
+---
+<link rel="stylesheet" href="{{ '/assets/css/research.css' | relative_url }}">
+
+<div class="title">
+  <h1 style="margin-top: 3rem;">Research</h1>
+</div>
+
+<section class="section">
+  <h2>Overview</h2>
+  <p>{{ site.data.research.overview.intro }}</p>
+  <p>Keywords:<br>
+    <strong>{{ site.data.research.overview.keywords }}</strong>
+  </p>
+</section>
+
+<section class="section">
+  <h2>Recent Projects</h2>
+  <h3>{{ site.data.research.projects.title }}</h3>
+
+  {% for project in site.data.research.projects.items %}
+  <div class="project-container">
+    <div class="project-image">
+      <img src="{{ project.image | relative_url }}" alt="{{ project.alt }}" />
+    </div>
+    <div class="project-text">
+      <h4>{{ project.title }}</h4>
+      <p>{{ project.description }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="section">
+  <h2>Posters</h2>
+  {% for poster in site.data.research.posters %}
+  <div class="iframe-container">
+    <h3>{{ poster.title }}</h3>
+    <div class="responsive-iframe">
+      <iframe src="{{ poster.url }}" allow="autoplay"></iframe>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="section">
+  <h2>Experiences</h2>
+  <ul>
+    {% for skill in site.data.research.experiences %}
+    <li>{{ skill }}</li>
+    {% endfor %}
+  </ul>
+</section>
+
+<p><a href="{{ '/' | relative_url }}">← Back to Home</a></p>

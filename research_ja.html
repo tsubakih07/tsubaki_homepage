@@ -1,0 +1,60 @@
+---
+layout: default
+title: 研究 | 細川 椿
+lang: ja
+lang_link_en: /research.html
+lang_link_ja: /research_ja.html
+permalink: /research_ja.html
+css : /assets/css/style.css
+---
+<link rel="stylesheet" href="{{ '/assets/css/research.css' | relative_url }}">
+
+<div class="title">
+  <h1 style="margin-top: 3rem;">研究内容</h1>
+</div>
+
+{% for section in site.data.research_ja.sections %}
+<section class="section" id="{{ section.id }}">
+  <h2>{{ section.title }}</h2>
+
+  {% if section.id == "overview" %}
+    <p>{{ section.content }}</p>
+    <p>キーワード:<br><strong>{{ section.keywords }}</strong></p>
+
+  {% elsif section.id == "projects" %}
+    {% if section.subtitle %}
+      <h3>{{ section.subtitle }}</h3>
+    {% endif %}
+    {% for project in section.projects %}
+    <div class="project-container">
+      <div class="project-image">
+        <img src="{{ project.image | relative_url }}" alt="{{ project.alt }}">
+      </div>
+      <div class="project-text">
+        <h4>{{ project.title }}</h4>
+        <p>{{ project.description }}</p>
+      </div>
+    </div>
+    {% endfor %}
+
+  {% elsif section.id == "posters" %}
+    {% for poster in section.posters %}
+    <div class="iframe-container">
+      <h3>{{ poster.title }}</h3>
+      <div class="responsive-iframe">
+        <iframe src="{{ poster.iframe }}" allow="autoplay"></iframe>
+      </div>
+    </div>
+    {% endfor %}
+
+  {% elsif section.id == "skills" %}
+    <ul>
+      {% for item in section.items %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</section>
+{% endfor %}
+
+<p><a href="{{ '/index_ja.html' | relative_url }}">← ホームへ戻る</a></p>

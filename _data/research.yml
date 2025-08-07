@@ -1,0 +1,35 @@
+overview:
+  intro: >-
+    My research focuses on orographic precipitation and extreme rainfall in Taiwan associated with tropical cyclones. I combine polarimetric radar observations, rain gauges, and disdrometer observations to understand precipitation processes in mountainous regions.
+  keywords: Tropical cyclone precipitation, Orographic precipitation, Polarimetric radar, Doppler radar, Cloud microphysics
+
+projects:
+  title: Case Study of Typhoon Chanthu (2021)
+  items:
+    - title: Orographic Enhancement of Isolated Shallow Convection
+      image: /assets/images/movie.gif
+      alt: Movie of shallow convection
+      description: >-
+        We investigate the orographic enhancement of precipitation as shallow convective clouds, located more than 100 km away from the center of Typhoon Chanthu, passed over the isolated Da-Tun Mountain in northern Taiwan.
+        The enhancement mechanism appears to differ from the classical seeder-feeder process, and we aim to clarify the governing processes based on observational data.
+    - title: Contribution of Background Precipitation to the Seeder-Feeder Effect
+      image: /assets/images/movie1.gif
+      alt: Movie of radar reflectivity and cross-section
+      description: >-
+        We provide observational evidence of the seeder-feeder effect associated with orographic precipitation over the isolated Da-Tun Mountain in northern Taiwan, under the influence of Typhoon Chanthu’s outer rainbands and stratiform background precipitation.
+        This study clarifies how differences in background precipitation modulate terrain-induced precipitation enhancement, with implications for improving the prediction of localized heavy rainfall events.
+
+posters:
+  - title: Presented at AOGS2023 Annual Meeting, Singapore, 2023
+    url: https://drive.google.com/file/d/1nlAD858qs0RGnc6laSx29X-3lFZWVOkl/preview
+  - title: Presented at ICMCS-XV, Fort Collins, Colorado, USA (Online), 2023
+    url: https://drive.google.com/file/d/1Kmqeu9VvEOha2d2evhvhSKbVNcpbTjuY/preview
+  - title: Presented at AOGS2022 Annual Meeting, Online, 2022
+    url: https://drive.google.com/file/d/1l0a1E8TWVNuPuOB6ksrAJwlgrl-CXc9u/preview
+
+experiences:
+  - Dual-Doppler wind retrieval
+  - Hydrometeor classification algorithms
+  - Quantitative precipitation estimation (QPE)
+  - DSD variable retrieval from polarimetric radar observations
+  - Disdrometer data analysis

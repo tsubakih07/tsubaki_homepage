@@ -1,0 +1,37 @@
+---
+layout: default
+title: 最新情報 | 細川 椿
+lang: ja
+lang_link_en: /news.html
+lang_link_ja: /news_ja.html
+permalink: /news_ja.html
+css : /assets/css/style.css
+---
+<link rel="stylesheet" href="{{ '/assets/css/news.css' | relative_url }}">
+
+<div class="title">
+  <h1 style="margin-top: 3rem;">お知らせ</h1>
+</div>
+
+<div class="scroll-box">
+  {% for item in site.data.news_ja %}
+    <div class="news-item">
+      <div class="news-date">{{ item.month }}</div>
+      <div>
+      <span class="news-yyyy-mm-dd">{{ item.date }}</span>
+      <span class="news-text">{{ item.text }}</span>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<div class="title">
+  <h1 style="margin-top: 3rem;">
+    Blog
+  </h1>
+</div>
+<div>
+<p>最新ブログは <a href="https://adaptable-beak-1f4.notion.site/5-Blog-23e2b97a4bb380ef9c12d183ffeee07d?source=copy_link" target="_blank">こちら</a> からご覧いただけます。Coming soon...</p>
+</div>
+
+<p><a href="{{ '/index_ja.html' | relative_url }}">← ホームへ戻る</a></p>

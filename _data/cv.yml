@@ -1,0 +1,62 @@
+- id: education
+  title: Education
+  items:
+    - "<strong>Ph.D. in Atmospheric Sciences</strong>, National Taiwan University, Sep 2021 – Present<br>Advisor: Prof. Cheng-Ku Yu, Taipei, Taiwan"
+    - "<strong>M.S. in Science</strong>, University of the Ryukyus, Apr 2018 – Mar 2021<br>Advisor: Prof. Hiroyuki Yamada, Okinawa, Japan"
+    - "<strong>B.S. in Science</strong>, University of the Ryukyus, Apr 2014 – Mar 2018<br>Advisor: Prof. Hiroyuki Yamada, Okinawa, Japan"
+
+- id: publication
+  title: Peer-Reviewed Publication
+  items:
+    - "Hosokawa, T. and C.-K. Yu, 2025: Kinematics and Microphysics of Orographic Precipitation Associated with Different Background Precipitation of Typhoon Chanthu (2021), <em>J. Atmos. Sci.</em>, under review."
+
+- id: awards
+  title: Awards
+  items:
+    - '<a href="https://ams.confex.com/ams/21MOUNTAIN/meetingapp.cgi/Index/StudentAwardWinner~1" target="_blank">Outstanding Presentation Award</a>, AMS Conference on Mountain Meteorology, 2024'
+    - '<a href="https://icmcs15.colostate.edu/student_award_winners/" target="_blank">Outstanding Student Presentation Award</a>, ICMCS-XV, 2023'
+    - '<a href="https://www.asiaoceania.org/society/public.asp?page=best_student_poster_2022.asp" target="_blank">Best Student Poster Award</a>, AOGS, 2022'
+    - '<a href="https://icmcs14.nju.edu.cn/News/20210521/i200568.html" target="_blank">Best Student Presentation Award</a>, ICMCS-XIV, 2021'
+
+- id: conference
+  title: Conference Presentations
+  ordered: true
+  items:
+    - "AMS 21st Conference on Mesoscale Processes, Boise, ID, USA, 2025"
+    - "AMS 21st Mountain Meteorology Conference, Boise, ID, USA, 2024"
+    - "AOGS2024 Annual Meeting, Pyeongchang, South Korea, 2024"
+    - "AOGS2023 Annual Meeting, Singapore, 2023"
+    - "ICMCS-XV, Fort Collins, Colorado, USA (Online), 2023"
+    - "AOGS2022 Annual Meeting, Online, 2022"
+    - "AOGS2021 Annual Meeting, Online, 2021"
+    - "ICMCS-XIV, Nangjing, China (Online), 2021"
+    - "MSJ Autumn Meeting, Japan, 2020"
+    - "ICMCS-XIII, Okinawa, Japan, 2019"
+
+- id: grants
+  title: Grants
+  items:
+    - "NTU Outstanding International Graduate Student Scholarship (2021–2025)"
+    - '<a href="https://tobitate-mext.jasso.go.jp/zukan/detail-2159.html" target="_blank">MEXT Tobitate! (Leap for Tomorrow) Study Abroad Initiative</a>, (2018–2019)'
+
+- id: experience
+  title: Professional Experience
+  items:
+    - "Teaching Assistant, Lab. of Synoptic Meteorology II, NTU (2022–2025)"
+    - "Research Visiting Student, Mesoscale (P3) Lab, NTU (2018–2019)"
+    - "Research Intern, Fluid Mechanics Unit, Okinawa Institute of Science and Technology (2018)"
+
+- id: skills
+  title: Technical Skills
+  items:
+    - "<strong>Programming:</strong> Python, Fortran, NCL"
+    - "<strong>Tools:</strong> VS Code, LaTeX, Shell (bash, csh, zsh)"
+    - "<strong>Platforms:</strong> Windows, Linux"
+
+- id: languages
+  title: Languages
+  items:
+    - "Japanese (Native)"
+    - "English (TOEFL iBT 89)"
+    - "Chinese (TOCFL B1)"
+    - "Korean (working on...)"

@@ -1,0 +1,77 @@
+  - id: education
+    title: 学歴
+    items:
+      - <strong>博士（大気科学）</strong>：国立台湾大学理学院大気科学系（2021年9月〜現在）<br>指導教員：Prof. Cheng-Ku Yu
+      - <strong>修士（理学）</strong>：琉球大学大学院理工学研究科物質地球科学科専攻（2018年4月〜2021年3月）<br>指導教員：山田広幸 教授
+      - <strong>学士（理学）</strong>：琉球大学理学部物質地球科学科地学系（2014年4月〜2018年3月）<br>指導教員：山田広幸 教授
+
+  - id: publication
+    title: 査読付き論文
+    items:
+      - "Hosokawa, T. and C.-K. Yu, 2025: Kinematics and Microphysics of Orographic Precipitation Associated with Different Background Precipitation of Typhoon Chanthu (2021), <em>J. Atmos. Sci.</em>, under review."
+
+  - id: awards
+    title: 受賞歴
+    items:
+      - <a href="https://ams.confex.com/ams/21MOUNTAIN/meetingapp.cgi/Index/StudentAwardWinner~1" target="_blank">AMS Conference on Mountain Meteorology 最優秀発表賞（2024）</a>
+      - <a href="https://icmcs15.colostate.edu/student_award_winners/" target="_blank">ICMCS-XV 最優秀学生発表賞（2023）</a>
+      - <a href="https://www.asiaoceania.org/society/public.asp?page=best_student_poster_2022.asp" target="_blank">AOGS2022 学生ポスター賞（2022）</a>
+      - <a href="https://icmcs14.nju.edu.cn/News/20210521/i200568.html" target="_blank">ICMCS-XIV 最優秀学生発表賞（2021）</a>
+
+  - id: conference
+    title: 学会発表
+    ordered: true
+    items:
+      - AMS 21st Conference on Mesoscale Processes（米国ボイシ、2025）
+      - AMS 21st Mountain Meteorology Conference（米国ボイシ、2024）
+      - AOGS2024 Annual Meeting（韓国平昌、2024）
+      - AOGS2023 Annual Meeting（シンガポール、2023）
+      - ICMCS-XVI（米国コロラド、オンライン、2024）
+      - AOGS2022 Annual Meeting（オンライン、2022）
+      - AOGS2021 Annual Meeting（オンライン、2021）
+      - ICMCS-XVI（中国南京、オンライン、2023）
+      - 日本気象学会秋季大会（日本、2020）
+      - 台風研究会2020 （オンライン、2020）
+      - ICMCS-XIII（日本沖縄、2019）
+
+  - id: grants
+    title: 研究助成・奨学金
+    items:
+      - 国立台湾大学 國際優秀研究生獎學金（2021〜2025）
+      - <a href="https://tobitate-mext.jasso.go.jp/zukan/detail-2159.html" target="_blank">文部科学省「トビタテ！留学JAPAN」第8期</a>（2018〜2019）
+
+  - id: experience
+    title: 職歴
+    items:
+      - ティーチングアシスタント（国立台湾大学, Lab. of Synoptic Meteorology II, 2022〜2025）
+      - 研究実習生（国立台湾大学, Mesoscale/P3 Lab, 2018〜2019）
+      - リサーチインターン（沖縄科学技術大学院大学, OIST, Fluid Mechanics Unit, 2018）
+
+  - id: skills
+    title: 技術スキル
+    items:
+      - <strong>プログラミング：</strong>Python, Fortran, NCL
+      - <strong>ツール：</strong>VS Code, LaTeX, Shell (bash, csh, zsh)
+      - <strong>環境：</strong>Windows, Linux
+
+  - id: languages
+    title: 言語
+    items:
+      - 日本語（母語）
+      - 英語（TOEFL iBT 89）
+      - 中国語（TOCFL B1）
+      - 韓国語（勉強中）
+
+  - id: study-group
+    title: 勉強会
+    items:
+      - >
+        <h3>📡レーダー気象学生会（2021年〜現在）</h3>
+        <p>
+        レーダー気象に関心のある学生・研究者が集まり、定期的にオンラインで勉強会を開催しています。<br>
+        データ解析でつまずいたり、疑問点が出てきたときに、気軽に相談し合える場をつくりたいという思いから設立しました。
+        </p>
+        <p>
+        ご興味のある方は、以下のフォームよりSlackグループへの参加申請をお願いいたします。<br>
+        🔗 <a href="https://forms.gle/Du7dUihbMNnXmXhV9" target="_blank">参加フォームはこちら</a>
+        </p>

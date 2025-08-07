@@ -1,0 +1,51 @@
+---
+layout: default
+title: Curriculum Vitae | Tsubaki Hosokawa
+lang_link_en: /cv.html
+lang_link_ja: /cv_ja.html
+permalink: /cv.html
+css : /assets/css/cv.css
+---
+<link rel="stylesheet" href="{{ '/assets/css/cv.css' | relative_url }}">
+
+<div class="title">
+  <h1 style="margin-top: 3rem;">Curriculum Vitae</h1>
+</div>
+
+<section class="section">
+  <p><strong>Tsubaki Hosokawa</strong><br>
+  Ph.D. Candidate, Dept. of Atmospheric Sciences, National Taiwan University<br>
+  Email: d10229006❄ntu.edu.tw<br>
+  📄 <a href="https://drive.google.com/file/d/1T6GiXu-OLAyBPLtVutVjeOaEnKnI9orF/view?usp=drive_link" target="_blank">Download full PDF CV</a>
+  </p>
+</section>
+
+{% for section in site.data.cv %}
+  <section class="section" id="{{ section.id }}">
+    <h2>{{ section.title }}</h2>
+    {% if section.items %}
+      {% if section.id == 'publication' %}
+        <ul>
+          {% for pub in section.items %}
+            <li>{{ pub | replace: 'Hosokawa, T.', '<strong>Hosokawa, T.</strong>' }}</li>
+          {% endfor %}
+        </ul>
+      {% elsif section.ordered %}
+        <ol>
+          {% for item in section.items %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ol>
+      {% else %}
+        <ul>
+          {% for item in section.items %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endif %}
+  </section>
+{% endfor %}
+
+
+<p><a href="{{ '/' | relative_url }}">← Back to Home</a></p>
