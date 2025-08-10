@@ -1,9 +1,9 @@
 .bg-overlay {
-background-image: url('/assets/images/radar_fig1.png'); /* 画像のパスを指定 */
+background-image: url("../images/radar_fig1.png"); /* 画像のパスを指定 */
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
-opacity: 0.1;  /* 背景の薄さ調整 */
+opacity: 0.15;  /* 背景の薄さ調整 */
 position: fixed;
 top: 0;
 left: 0;
