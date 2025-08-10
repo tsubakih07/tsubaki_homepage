@@ -1,8 +1,8 @@
 # サイトの基本設定
 title: "Tsubaki Hosokawa"
 description: "Tsubaki Hosokawa's website - Research in orographic precipitation, tropical cyclones, and polarimetric radar."
-baseurl: ""
-url: "https://tsubakih07.github.io" 
+baseurl: "/tsubaki_website"
+url: "https://tsubakih07.github.io"
 lang: "en"
 
 # SEOと構造化データ
