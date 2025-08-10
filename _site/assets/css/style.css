@@ -1,0 +1,436 @@
+body {
+  font-family: 'Poppins', sans-serif, 'メイリオ';
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  line-height: 1.7;
+  background-color: #dedede;
+}
+
+h1 {
+  color: #444;
+}
+
+/* ul {
+  padding-left: 1.5rem;
+} */
+ 
+a {
+  color: #887660;
+  text-decoration: underline;
+}
+
+/* 折り返し対応のスライドアンダーライン */
+h2 {
+  position: relative;
+  color: #444;
+  display: inline;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  background-position: 0 100%;
+  transition: background-size 0.4s ease-out;
+}
+
+/* アニメーションを適用するクラス */
+h2.animate-underline {
+  background-size: 100% 2px;
+}
+
+
+.top {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.site-title a {
+  color: #887660;
+  text-decoration: none;
+  /* font-size: 2rem; */
+  display: flex; 
+  align-items: center; 
+  gap: 0.5rem;
+  font-weight: bold;
+}
+
+
+.top h1 {
+  font-size: 2rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  text-shadow: -3px 2px 0 #fff; /* テキストの影を追加 */
+}
+
+/* header with menu */
+.header {
+  background-color: #ffffff;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: fixed; 
+  top: 0;
+  margin-top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* ヘッダーを最前面に */
+  height: 2.5rem; /* ← これが明示的な高さの指定 */
+}
+
+.menu__list { /* 横に並べる */
+  display: flex;
+  justify-content: center;
+}
+.menu__list__item { 
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 1px 10px;
+  position: relative; /*疑似要素を親で固定*/
+  cursor: pointer;
+  padding-top: 20px;
+}
+.menu__list__item a{
+  color: #444;
+  text-decoration: none;
+}
+.menu__list__item::after {
+  position: absolute; /*疑似要素を子要素で固定*/
+  bottom: 10px; /*下線の始まりの位置 */
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #444;
+  opacity: 0;
+  visibility: hidden; /*下線を非表示*/
+  transition: all .5s; /*下線のホバーする速さ*/
+}
+.menu__list__item:hover::after { /*ホバー時に下からフェードイン*/
+  opacity: 0;
+  animation-name: fadein-bottom; /*アニメーションの名前*/
+  animation-duration: .8s; /*下線が戻る速さ*/
+  animation-timing-function: ease-out; /*アニメーションの終わりをゆっくり*/
+  animation-fill-mode: forwards;/*アニメーションが終わった状態をキープ*/
+}
+.menu__list__item:hover::after {
+  bottom: 1px; /*ホバーした時の下線の位置*/
+  visibility: visible; /*ホバーしたとき表示*/
+  font-weight: bold; /*ホバー時のフォントを太くする*/
+}
+@keyframes fadein-bottom {
+  0%{ /*アニメーションの開始の状態*/
+    opacity: 0; /*透明*/
+    transform: translateY(5px); /*下に2px分ずれた状態*/
+  }
+  100%{ /*アニメーションの終了の状態*/
+    opacity: 1; /*透過なし*/
+    transform: translateY(0);
+  }
+}
+
+.profile-photo img {
+  filter: drop-shadow(0px 5px 5px rgba(0,0,0,0.5));
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease; /* 0.3秒でtransformプロパティが変化 */
+}
+
+.profile-photo img:hover {
+  transform: scale(1.1); /* マウスホバー時に1.2倍に拡大 */
+}
+
+
+.box {
+  display: -webkit-flex; /* Safari用 */
+  display: flex;
+}
+
+.bg-overlay {
+background-image: url('/assets/images/radar_fig1.png');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+opacity: 0.3;
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+z-index: -1;
+pointer-events: none;
+}
+
+.intro-text {
+  text-align: left;
+  color: #333;
+  font-size: 1rem;
+  /* padding: 0.1rem 0; */
+}
+
+.intro-text p {
+  /* text-shadow: #555 -1px 1px 2px; */
+  width : fit-content;
+  background: linear-gradient(transparent 45%,  #ffffffb1 20%);
+  /* display: inline-block; */
+  font-weight: 600;
+  word-break: keep-all; /* または word-break: keep-all; */
+  display: inline;
+}
+
+/*=============================
+.menu-toggle
+=============================*/
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 2rem;
+  width:  2rem;
+  position: relative;
+}
+.menu-toggle span {
+  display: block;
+  height: 0.25rem;
+  width: 100%;
+  background: #333;
+  margin: 0.25rem 0;
+  border-radius: 0.1rem;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+}
+
+.menu-toggle, .menu-toggle span {
+  transition: all .5s;
+  box-sizing: border-box;
+}
+.menu-toggle span:nth-of-type(1) {
+  top: 0rem;
+}
+.menu-toggle span:nth-of-type(2) {
+  top: 0.0125rem;
+}
+.menu-toggle span:nth-of-type(3) {
+  bottom: 0rem;
+}
+
+/*=============================
+#btn hamburger menu
+=============================*/
+#btn.active span:nth-of-type(1) {
+  -webkit-transform: translateY(0.65rem) rotate(-315deg);
+  transform: translateY(0.65rem) rotate(-315deg);
+}
+#btn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+#btn.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-0.65rem) rotate(315deg);
+  transform: translateY(-0.65rem) rotate(315deg);
+}
+
+
+.nav {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center; /* ← 中央寄せに変更 */
+  text-align: center;   /* ← テキストも中央寄せ */
+  max-height: 100vh;
+}
+
+.nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #887660;
+  position: relative;
+  /* width: 100%;         ← 必要に応じて横幅も調整可能 */
+}
+
+.nav a::after {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #887660;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s;
+}
+
+.nav a:hover::after {
+  opacity: 0;
+  animation-name: fadein-bottom;
+  animation-duration: .8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  bottom: -2px;
+  visibility: visible;
+  font-weight: bold;
+}
+
+
+@keyframes fadein-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  padding: 0rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+
+/* メニューを隠す & 表示切替 */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 2px;
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    align-items: flex-start;
+    z-index: 1000; /* メニューを最前面に */
+    align-items: center; /* ← 中央寄せに変更 */
+    text-align: center;   /* ← テキストも中央寄せ */
+    max-height: calc(100vh - 6rem - 2rem); /* menu項目数を考慮 */
+    overflow-y: auto;
+  }
+
+
+  .nav.showing {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 0.5rem 0;
+    font-weight: 600;
+  }
+}
+
+/* アニメーションの追加 */
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.title h1 {
+  animation: slideFadeIn 0.5s ease-out forwards;
+  opacity: 0; /* 初期状態 */
+}
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0.2;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDownFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* アニメーション状態クラス */
+.nav.showing {
+  animation: slideDownFade 0.4s ease-out forwards;
+}
+
+.nav.hiding {
+  animation: slideUpFade 0.3s ease-in forwards;
+}
+
+
+
+.fade-up {
+  opacity: 0; /* 初期状態を透明に */
+  animation: fadeUp 0.7s ease-out 0.3s forwards;
+}
+
+.study-group h3 {
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.study-group p {
+  margin-bottom: 1rem;
+}
+
+.iframe-container {
+  text-align: center;
+}
+
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #303a32;
+  font-weight: bold;
+}
+
+.responsive-iframe {
+  position: relative;
+  width: 100%;
+  padding-top: 65%; /* 16:10 → 62.5% | 4:3 → 75% | 3:2 → 66.6% などで調整可能 */
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  margin-bottom: 1.5rem;
+}
+
+.responsive-iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
