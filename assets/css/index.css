@@ -50,7 +50,7 @@ a {
     margin-left: 0;
     margin-top: 0;
     align-self: center;
-    height: 300px;
-    width : auto;
+    max-width: 100%; 
+    height: auto;
   }
 }

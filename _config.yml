@@ -2,7 +2,7 @@
 title: "Tsubaki Hosokawa"
 description: "Tsubaki Hosokawa's website - Research in orographic precipitation, tropical cyclones, and polarimetric radar."
 baseurl: ""
-# url: "https://tsubakih07.github.io" 
+url: "https://tsubakih07.github.io" 
 lang: "en"
 
 # SEOと構造化データ
@@ -12,8 +12,6 @@ author:
 
 # ソース/出力設定
 markdown: kramdown
-# highlighter: rouge
-# permalink: pretty
 
 # # ページごとのデフォルト設定
 defaults:
