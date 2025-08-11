@@ -57,7 +57,7 @@ permalink: /index.html
 {% for section in target_sections %}
   <section class="section">
     <h2>Recent {{ section.title }}</h2>
-    <a href="cv.html#{{section.id}}" style="text-decoration: none;">[more &#11111;]</a>
+    <a href="cv.html#{{section.id}}" style="text-decoration: none;">[more<sup>&#x29C9;</sup>]</a>
     {% if section.items %}
       {% if section.id == 'publication' %}
         <ul>
