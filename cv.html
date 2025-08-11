@@ -25,11 +25,11 @@ css : /assets/css/cv.css
     <h2>{{ section.title }}</h2>
     {% if section.items %}
       {% if section.id == 'publication' %}
-        <ul>
+        <ol>
           {% for pub in section.items %}
             <li>{{ pub | replace: 'Hosokawa, T.', '<strong>Hosokawa, T.</strong>' }}</li>
           {% endfor %}
-        </ul>
+        </ol>
       {% elsif section.ordered %}
         <ol>
           {% for item in section.items %}

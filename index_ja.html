@@ -33,7 +33,7 @@ permalink: /index_ja.html
 
 
   <section class="section">
-    <h2><a href="cv_ja.html#education" style="text-decoration: none;">学歴</a></h2>
+    <h2>学歴</h2>
     <ul>
       <li>博士（大気科学）国立台湾大学（2021年9月～）</li>
       <li>修士（理学） 琉球大学（2018～2021）</li>
@@ -42,33 +42,37 @@ permalink: /index_ja.html
     </ul>
   </section>
 
+{% assign target_sections = site.data.cv_ja | where_exp: "section", "section.id == 'publication' or section.id == 'awards' or section.id == 'conference'" %}
+{% for section in target_sections %}  
   <section class="section">
-    <h2>最新の論文</h2>
-    <ul>
-        <li>
-        <strong>Hosokawa, T.</strong> and C.-K. Yu, 2025: Kinematics and Microphysics of Orographic Precipitation Associated with Different Background Precipitation of Typhoon Chanthu (2021), <em>J. Atmos. Sci.</em>, under review.
-        </li>
-    </ul>
+    <h2>
+    {% if section.id == 'publication' %}
+    最新の{{ section.title }}
+    {% elsif section.id == 'awards' %}
+    {{ section.title }}
+    {% elsif section.id == 'conference' %}
+    最近の{{ section.title }}
+    {% endif %}
+  </h2>
+  <a href="cv_ja.html#{{section.id}}" style="text-decoration: none;"> [詳細 &#11111]</a>
+    {% if section.items %}
+      {% if section.id == 'publication' %}
+        <ul>
+          {% for pub in section.items %}
+            <li>{{ pub | replace: 'Hosokawa, T.', '<strong>Hosokawa, T.</strong>' }}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <!-- <h2>Recent {{ section.title }}</h2> -->
+        <ul>
+          {% for item in section.items limit:3 %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endif %}
   </section>
-
-  <section class="section">
-    <h2><a href="cv_ja.html#awards" style="text-decoration: none;">受賞歴</a></h2>
-    <ul>
-      <li>AMS Conference on Mountain Meteorology 最優秀発表賞（2024）</li>
-      <li>ICMCS-XV 学生優秀発表賞（2023）</li>
-      <li>AOGS 学生ポスター賞（2022）</li>
-      <li>ICMCS-XIV 最優秀学生発表賞（2021）</li>
-    </ul>
-  </section>
-
-  <section class="section">
-    <h2><a href="cv_ja.html#conference" style="text-decoration: none;">主な学会発表</a></h2>
-    <ul>
-      <li>AMS 21st Conference on Mesoscale Processes（アメリカ、2025年）</li>
-      <li>AMS 21st Mountain Meteorology Conference（アメリカ、2024年）</li>
-      <li>AOGS2024 Annual Meeting（韓国、2024年）</li>
-    </ul>
-  </section>
+{% endfor %}
 
   <section class="section">
     <h2>趣味・特技</h2>
