@@ -1,16 +1,17 @@
 ---
 layout: default
 title: "Home | Tsubaki Hosokawa"
-lang : en
+lang: en
 lang_link_en: /index.html
 lang_link_ja: /index_ja.html
 css: /assets/css/style.css
 permalink: /index.html
 ---
+
 <link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}">
 
-<section class="section-transparent fade-up " style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;  margin-top: 3rem;">
-  <div class ="top">
+<section class="section-transparent fade-up" style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; margin-top: 3rem;">
+  <div class="top">
     <h1>Hi, I'm Tsubaki Hosokawa.</h1>
     <div class="intro-text">
       <p>Ph.D. Candidate in Atmospheric Sciences</p><br>
@@ -25,36 +26,46 @@ permalink: /index.html
 </section>
 
 <section class="section">
-    <h2>About Me</h2>
-    <p>I am a Ph.D. candidate at <a href="https://www.as.ntu.edu.tw/index.php/eng" target="_blank">National Taiwan University</a> under the supervision of Prof. Cheng-Ku Yu in the <a href="http://mopl.as.ntu.edu.tw/web/CN_Home.htm" target="_blank">Mesoscale and Orographic Precipitation Laboratory</a>.
-      I was born and raised in Okinawa, Japan.</p> 
-    <p>My research focuses on orographic precipitation and extreme rainfall in Taiwan associated with tropical cyclones.
-      I use polarimetric Doppler radar observations, rain gauges, and Parsivel disdrometers to investigate precipitation microphysics and dynamics.</p>
+  <h2>About Me</h2>
+  <p>
+    I am a Ph.D. candidate at 
+    <a href="https://www.as.ntu.edu.tw/index.php/eng" target="_blank">National Taiwan University</a> 
+    under the supervision of Prof. Cheng-Ku Yu in the 
+    <a href="http://mopl.as.ntu.edu.tw/web/CN_Home.htm" target="_blank">Mesoscale and Orographic Precipitation Laboratory</a>.
+    I was born and raised in Okinawa, Japan.
+  </p>
+  <p>
+    My research focuses on orographic precipitation and extreme rainfall in Taiwan associated with tropical cyclones.
+    I use polarimetric Doppler radar observations, rain gauges, and Parsivel disdrometers to investigate precipitation microphysics and dynamics.
+  </p>
+</section>
 
+<section class="section">
+  <h2>Education</h2>
+  <ul>
+    <li><strong>Ph.D. in Atmospheric Science</strong>, National Taiwan University (Sep 2021 – present)</li>
+    <li><strong>M.S. in Science</strong>, University of the Ryukyus (Apr 2018 – Mar 2021)</li>
+    <li><strong>B.S. in Science</strong>, University of the Ryukyus (Apr 2014 – Mar 2018)</li>
+  </ul>
+</section>
 
-  <section class="section">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>Ph.D. in Atmospheric Science</strong>, National Taiwan University (Sep 2021 – present)</li>
-      <li><strong>M.S. in Science</strong>, University of the Ryukyus (Apr 2018 – Mar 2021)</li>
-      <li><strong>B.S. in Science</strong>, University of the Ryukyus (Apr 2014 – Mar 2018)</li>
-    </ul>
-  </section>
+{% assign sections_pub = site.data.cv | where: "id", "publication" %}
+{% assign sections_award = site.data.cv | where: "id", "awards" %}
+{% assign sections_conf = site.data.cv | where: "id", "conference" %}
+{% assign target_sections = sections_pub | concat: sections_award | concat: sections_conf %}
 
-
-{% assign target_sections = site.data.cv | where_exp: "section", "section.id == 'publication' or section.id == 'awards' or section.id == 'conference'" %}
 {% for section in target_sections %}
   <section class="section">
-    <h2>Recent {{ section.title }}</h2><a href="cv.html#{{section.id}}" style="text-decoration: none;"> [more &#11111]</a>
+    <h2>Recent {{ section.title }}</h2>
+    <a href="cv.html#{{section.id}}" style="text-decoration: none;">[more &#11111;]</a>
     {% if section.items %}
       {% if section.id == 'publication' %}
         <ul>
-          {% for pub in section.items %}
+          {% for pub in section.items limit:3 %}
             <li>{{ pub | replace: 'Hosokawa, T.', '<strong>Hosokawa, T.</strong>' }}</li>
           {% endfor %}
         </ul>
       {% else %}
-        <!-- <h2>Recent {{ section.title }}</h2> -->
         <ul>
           {% for item in section.items limit:3 %}
             <li>{{ item }}</li>
@@ -65,26 +76,25 @@ permalink: /index.html
   </section>
 {% endfor %}
 
-  <section class="section">
-    <h2>Hobbies</h2>
-    <div class="hobbies-container">
-      <ul class="hobbies-list">
-        <li>Playing the instruments, <em>in Brass band and Big band</em></li>
-        <ul>
-          <li>Trumpet (Elementary School)</li>
-          <li>Euphonium (Middle and High School)</li>
-          <li>Trombone (Middle, High School, and University)</li>
-          <li>Guitar (Occasionally)</li>
-        </ul>
-        <li>Listening to music, especially <em>Jazz, R&B, and Pop</em></li>
-        <li>Relaxing with cats</li>
-        <li>Traveling with friends</li>
-        <li>Studying foreign languages: <em>English, Chinese, and Korean</em></li>
-        <li>Practicing calligraphy (<em>Shodo</em>)</li>
+<section class="section">
+  <h2>Hobbies</h2>
+  <div class="hobbies-container">
+    <ul class="hobbies-list">
+      <li>Playing the instruments, <em>in Brass band and Big band</em></li>
+      <ul>
+        <li>Trumpet (Elementary School)</li>
+        <li>Euphonium (Middle and High School)</li>
+        <li>Trombone (Middle, High School, and University)</li>
+        <li>Guitar (Occasionally)</li>
       </ul>
-      <div class="hobbies-photo">
-        <img src="{{ '/assets/images/cat.png' | relative_url }}" alt="猫画像" style="height: 300px; width: auto;">
-      </div>
+      <li>Listening to music, especially <em>Jazz, R&B, and Pop</em></li>
+      <li>Relaxing with cats</li>
+      <li>Traveling with friends</li>
+      <li>Studying foreign languages: <em>English, Chinese, and Korean</em></li>
+      <li>Practicing calligraphy (<em>Shodo</em>)</li>
+    </ul>
+    <div class="hobbies-photo">
+      <img src="{{ '/assets/images/cat.png' | relative_url }}" alt="猫画像" style="height: 300px; width: auto;">
     </div>
-  </section>
-</section>  
+  </div>
+</section>

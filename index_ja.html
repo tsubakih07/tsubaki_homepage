@@ -7,63 +7,72 @@ lang_link_ja: /index_ja.html
 css: /assets/css/style.css
 permalink: /index_ja.html
 ---
+
 <link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}">
 
-<header class="section-transparent fade-up " style="display: flex; align-items: center; gap: 5rem; flex-wrap: wrap;  margin-top: 3rem;">
-    <div class="top">
-      <h1>細川 椿 <img src="{{ '/assets/images/favicon.ico' | relative_url }}" alt="icon" style="height: 2rem; margin-left: 0.5rem; margin-right: 0.5rem; margin-bottom: -0.2rem;
-         filter: drop-shadow(-2px 2px 0px rgba(0,0,0,0.7));"/> 
-        Home Page</h1>
-      <div class="intro-text">
+<header class="section-transparent fade-up" style="display: flex; align-items: center; gap: 5rem; flex-wrap: wrap; margin-top: 3rem;">
+  <div class="top">
+    <h1>
+      細川 椿
+      <img src="{{ '/assets/images/favicon.ico' | relative_url }}" alt="icon" style="height: 2rem; margin-left: 0.5rem; margin-right: 0.5rem; margin-bottom: -0.2rem; filter: drop-shadow(-2px 2px 0px rgba(0,0,0,0.7));"/>
+      Home Page
+    </h1>
+    <div class="intro-text">
       <p>国立台湾大学・大気科学系 博士課程</p><br>
       <p>Email: d10229006❄ntu.edu.tw</p>
     </div>
-    </div>
-    
-    <div class="profile-photo">
-      <img src="{{ '/assets/images/profile2.png' | relative_url }}" alt="プロフィール写真" style="height: 300px; border-radius: 50%; flex-shrink: 0;">
-    </div>
-  </header>
+  </div>
 
-  <section class="section">
-    <h2>自己紹介</h2>
-    <p><a href="https://www.as.ntu.edu.tw/index.php/eng" target="_blank">国立台湾大学大気科学系</a>のCheng-Ku Yu教授が主宰する
-      <a href="http://mopl.as.ntu.edu.tw/web/CN_Home.htm" target="_blank">Mesoscale and Orographic Precipitation Laboratory</a>で台風による地形性降水の力学と雲微物理の研究をしています。
-      観測には偏波ドップラーレーダーや雨量計、ディスドロメータを用いて、降水の微物理や力学的構造を調べています。沖縄県出身です。</p>
+  <div class="profile-photo">
+    <img src="{{ '/assets/images/profile2.png' | relative_url }}" alt="プロフィール写真" style="height: 300px; border-radius: 50%; flex-shrink: 0;">
+  </div>
+</header>
 
+<section class="section">
+  <h2>自己紹介</h2>
+  <p>
+    <a href="https://www.as.ntu.edu.tw/index.php/eng" target="_blank">国立台湾大学大気科学系</a>のCheng-Ku Yu教授が主宰する
+    <a href="http://mopl.as.ntu.edu.tw/web/CN_Home.htm" target="_blank">Mesoscale and Orographic Precipitation Laboratory</a>で台風による地形性降水の力学と雲微物理の研究をしています。
+    観測には偏波ドップラーレーダーや雨量計、ディスドロメータを用いて、降水の微物理や力学的構造を調べています。沖縄県出身です。
+  </p>
+</section>
 
-  <section class="section">
-    <h2>学歴</h2>
-    <ul>
-      <li>博士（大気科学）国立台湾大学（2021年9月～）</li>
-      <li>修士（理学） 琉球大学（2018～2021）</li>
-      <li>学士（理学） 琉球大学（2014～2018）</li>
-      <li>沖縄県立那覇高等学校 普通科（2011～2014）</li>
-    </ul>
-  </section>
+<section class="section">
+  <h2>学歴</h2>
+  <ul>
+    <li>博士（大気科学） 国立台湾大学（2021年9月～）</li>
+    <li>修士（理学） 琉球大学（2018～2021）</li>
+    <li>学士（理学） 琉球大学（2014～2018）</li>
+    <li>沖縄県立那覇高等学校 普通科（2011～2014）</li>
+  </ul>
+</section>
 
-{% assign target_sections = site.data.cv_ja | where_exp: "section", "section.id == 'publication' or section.id == 'awards' or section.id == 'conference'" %}
-{% for section in target_sections %}  
+{% assign sections_pub = site.data.cv_ja | where: "id", "publication" %}
+{% assign sections_award = site.data.cv_ja | where: "id", "awards" %}
+{% assign sections_conf = site.data.cv_ja | where: "id", "conference" %}
+{% assign target_sections = sections_pub | concat: sections_award | concat: sections_conf %}
+
+{% for section in target_sections %}
   <section class="section">
     <h2>
-    {% if section.id == 'publication' %}
-    最新の{{ section.title }}
-    {% elsif section.id == 'awards' %}
-    {{ section.title }}
-    {% elsif section.id == 'conference' %}
-    最近の{{ section.title }}
-    {% endif %}
-  </h2>
-  <a href="cv_ja.html#{{section.id}}" style="text-decoration: none;"> [詳細 &#11111]</a>
+      {% if section.id == 'publication' %}
+        最新の{{ section.title }}
+      {% elsif section.id == 'awards' %}
+        {{ section.title }}
+      {% elsif section.id == 'conference' %}
+        最近の{{ section.title }}
+      {% endif %}
+    </h2>
+    <a href="cv_ja.html#{{section.id}}" style="text-decoration: none;">[詳細 &#11111;]</a>
+
     {% if section.items %}
       {% if section.id == 'publication' %}
         <ul>
-          {% for pub in section.items %}
+          {% for pub in section.items limit:3 %}
             <li>{{ pub | replace: 'Hosokawa, T.', '<strong>Hosokawa, T.</strong>' }}</li>
           {% endfor %}
         </ul>
       {% else %}
-        <!-- <h2>Recent {{ section.title }}</h2> -->
         <ul>
           {% for item in section.items limit:3 %}
             <li>{{ item }}</li>
@@ -74,27 +83,25 @@ permalink: /index_ja.html
   </section>
 {% endfor %}
 
-  <section class="section">
-    <h2>趣味・特技</h2>
-    <div class="hobbies-container">
-      <ul class="hobbies-list">
-        <li>楽器演奏（小中高：吹奏楽部、大学：モダンジャズオーケストラMOJO）</li>
-          <ul>
-            <li>トランペット（小）</li>
-            <li>ユーフォニウム（中・高）</li>
-            <li>トロンボーン（中・高・大）</li>
-            <li>ギター（たまに弾く）</li>
-          </ul>
-        <li>音楽鑑賞（ジャズ、R&B、洋楽）</li>
-        <li>猫とゆったり過ごすこと</li>
-        <li>友達と旅行</li>
-        <li>語学学習（英語、中国語、韓国語）</li>
-        <li>書道（茅原書藝會）</li>
+<section class="section">
+  <h2>趣味・特技</h2>
+  <div class="hobbies-container">
+    <ul class="hobbies-list">
+      <li>楽器演奏（小中高：吹奏楽部、大学：モダンジャズオーケストラMOJO）</li>
+      <ul>
+        <li>トランペット（小）</li>
+        <li>ユーフォニウム（中・高）</li>
+        <li>トロンボーン（中・高・大）</li>
+        <li>ギター（たまに弾く）</li>
       </ul>
-      <div class="hobbies-photo">
-        <img src="{{ '/assets/images/cat.png' | relative_url }}" alt="猫画像" style="height: 300px;">
-      </div>
+      <li>音楽鑑賞（ジャズ、R&B、洋楽）</li>
+      <li>猫とゆったり過ごすこと</li>
+      <li>友達と旅行</li>
+      <li>語学学習（英語、中国語、韓国語）</li>
+      <li>書道（茅原書藝會）</li>
+    </ul>
+    <div class="hobbies-photo">
+      <img src="{{ '/assets/images/cat.png' | relative_url }}" alt="猫画像" style="height: 300px;">
     </div>
-  </section>
-
+  </div>
 </section>
