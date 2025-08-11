@@ -1,12 +1,13 @@
 # サイトの基本設定
-title: "Tsubaki Hosokawa"
-description: "Tsubaki Hosokawa's website - Research in orographic precipitation, tropical cyclones, and polarimetric radar."
+title: "Tsubaki Hosokawa | 細川 椿"
+description: "Tsubaki Hosokawa's website"
 url: "https://tsubakih07.github.io"
 baseurl: "/tsubaki_homepage"
+keywords: "Tsubaki Hosokawa | 細川 椿, Atmospheric Science, Orographic Precipitation, Tropical Cyclones, Polarimetric Radar"
 
 # SEOと構造化データ
 author:
-  name: "Tsubaki Hosokawa"
+  name: "Tsubaki Hosokawa | 細川 椿"
   bio: "Ph.D. candidate in Atmospheric Sciences, National Taiwan University"
 
 # ソース/出力設定
