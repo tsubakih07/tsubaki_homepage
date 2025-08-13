@@ -1,1 +1,1 @@
-Sitemap: http://localhost:4000/tsubaki_homepage/sitemap.xml
+Sitemap: https://github.com/tsubakih07/tsubaki_homepage/sitemap.xml
