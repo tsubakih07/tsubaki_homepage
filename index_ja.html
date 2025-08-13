@@ -4,8 +4,8 @@ title: "細川 椿 | Tsubaki Hosokawa"
 lang: ja
 lang_link_en: /index.html
 lang_link_ja: /index_ja.html
-css: /assets/css/style.css
 permalink: /index_ja.html
+css: /assets/css/style.css
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}">
@@ -44,7 +44,6 @@ permalink: /index_ja.html
     <li>博士（大気科学） 国立台湾大学（2021年9月～）</li>
     <li>修士（理学） 琉球大学（2018～2021）</li>
     <li>学士（理学） 琉球大学（2014～2018）</li>
-    <li>沖縄県立那覇高等学校 普通科（2011～2014）</li>
   </ul>
 </section>
 
@@ -59,7 +58,7 @@ permalink: /index_ja.html
       {% if section.id == 'publication' %}
         最新の{{ section.title }}
       {% elsif section.id == 'awards' %}
-        {{ section.title }}
+        主な{{ section.title }}
       {% elsif section.id == 'conference' %}
         最近の{{ section.title }}
       {% endif %}
@@ -69,13 +68,13 @@ permalink: /index_ja.html
     {% if section.items %}
       {% if section.id == 'publication' %}
         <ul>
-          {% for pub in section.items limit:3 %}
+          {% for pub in section.items limit:2 %}
             <li>{{ pub | replace: 'Hosokawa, T.', '<strong>Hosokawa, T.</strong>' }}</li>
           {% endfor %}
         </ul>
       {% else %}
         <ul>
-          {% for item in section.items limit:3 %}
+          {% for item in section.items limit:2 %}
             <li>{{ item }}</li>
           {% endfor %}
         </ul>
@@ -97,7 +96,7 @@ permalink: /index_ja.html
       </ul>
       <li>音楽鑑賞（ジャズ、R&B、洋楽）</li>
       <li>猫とゆったり過ごすこと</li>
-      <li>友達と旅行</li>
+      <li>旅行</li>
       <li>語学学習（英語、中国語、韓国語）</li>
       <li>書道（茅原書藝會）</li>
     </ul>

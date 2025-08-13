@@ -14,13 +14,15 @@ css : /assets/css/style.css
 </div>
 
 <div class="scroll-box">
-  {% for item in site.data.news %}
+  {% for list in site.data.news %}
     <div class="news-item">
-      <div class="news-date">{{ item.month }}</div>
-      <div>
-      <span class="news-yyyy-mm-dd">{{ item.date }}</span>
-      <span class="news-text">{{ item.text }}</span>
-      </div>
+      <div class="news-date">{{ list.month }}</div>
+      {% for item in list.items %}
+        <div>
+        <span class="news-yyyy-mm-dd">{{ item.date }}</span>
+        <span class="news-text">{{ item.text }}</span>
+        </div>
+      {% endfor %}
     </div>
   {% endfor %}
 </div>

@@ -1,28 +1,37 @@
 - month: 2025年8月
-  date: 2025.08.01
-  text: ウェブサイトを公開しました。
+  items:
+    - date: 2025.08.01
+      text: ウェブサイトを公開しました。  
 
 - month: 2025年7月
-  date: 2025.07.14–16
-  text: 国立台湾大学ー東京大学ー東北大学合同ワークショップ（UAW2025）に参加（台北）。 
+  items:
+    - date: 2025.07.14–16
+      text: 国立台湾大学ー東京大学ー東北大学合同ワークショップ（UAW2025）に参加（台北）。
 
 - month: 2025年6月
-  date: 2025.06.26
-  text: AMS Mesoscale Processes Conference（米国ボイジー）にて口頭発表。
+  items:
+    - date: 2025.06.26
+      text: AMS Mesoscale Processes Conference（米国ボイジー）にて口頭発表。
 
 - month: 2025年5月
-  date: 2025.05.19
-  text: 博士課程の口頭試問予備審査を通過。
+  items:
+    - date: 2025.05.19
+      text: 博士課程の口頭試問予備審査を通過。
 
 - month: 2025年2月
-  date: 2025.02.20
-  text: 台風Chanthuの地形性降水に関する研究を<a href="https://www.eorc.jaxa.jp/IPWG/FG1/index.html" target="_blank">IPWG-OPFG</a>で講演。 
+  items:
+    - date: 2025.02.20
+      text: 台風Chanthuの地形性降水に関する研究を<a href="https://www.eorc.jaxa.jp/IPWG/FG1/index.html" target="_blank">IPWG-OPFG</a>で講演。
 
 
 - month: 2024年7月
-  date: 2024.07.26
-  text: AMS Mountain Meteorology Conference（米国ボイジー）にて口頭発表。
+  items:
+    - date: 2024.07.26
+      text: AMS Mountain Meteorology Conference（米国ボイジー）にて口頭発表。
+    - date: 2024.07.09
+      text: Qualification Examinationに合格。
 
 - month: 2024年6月
-  date: 2024.06.28
-  text: AOGS2024（韓国平昌）にて口頭発表。
+  items:
+    - date: 2024.06.28
+      text: AOGS2024（韓国平昌）にて口頭発表。

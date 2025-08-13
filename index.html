@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "Home | Tsubaki Hosokawa"
+title: "Tsubaki Hosokawa | 細川椿"
 lang: en
 lang_link_en: /index.html
 lang_link_ja: /index_ja.html
-css: /assets/css/style.css
 permalink: /index.html
+css: /assets/css/style.css
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}">
@@ -61,13 +61,13 @@ permalink: /index.html
     {% if section.items %}
       {% if section.id == 'publication' %}
         <ul>
-          {% for pub in section.items limit:3 %}
+          {% for pub in section.items limit:2 %}
             <li>{{ pub | replace: 'Hosokawa, T.', '<strong>Hosokawa, T.</strong>' }}</li>
           {% endfor %}
         </ul>
       {% else %}
         <ul>
-          {% for item in section.items limit:3 %}
+          {% for item in section.items limit:2 %}
             <li>{{ item }}</li>
           {% endfor %}
         </ul>
