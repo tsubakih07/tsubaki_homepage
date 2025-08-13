@@ -13,6 +13,10 @@ z-index: -1; /* 背面に配置 */
 pointer-events: none;
 }
 
+.section {
+  padding: 1rem 0;
+}
+
 /* Research project枠 */
 .project-container {
   display: flex;

@@ -12,3 +12,7 @@ height: 100vh;
 z-index: -1; /* 背面に配置 */
 pointer-events: none;
 }
+
+.section {
+  padding: 0.5rem 0;
+}
