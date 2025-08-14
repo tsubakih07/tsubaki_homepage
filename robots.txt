@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tsubakih07.github.io/tsubaki_homepage/sitemap.xml
