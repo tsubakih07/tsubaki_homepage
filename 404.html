@@ -12,27 +12,79 @@ permalink: /404.html
     padding: 6rem 1rem;
     color: #444;
 }
+
 .not-found h1 {
     font-size: 5rem;
     margin-bottom: 1rem;
     color: #444;
-    text-shadow: -5px 3px 0 #fff; /* テキストの影を追加 */
+    text-shadow: -5px 3px 0 #fff;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
 }
-.not-found h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #666;
-    text-decoration: none;
+
+.not-found span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: drop 0.8s ease-out forwards;
 }
+
+.not-found span:nth-child(1) {
+    animation-delay: 0s;
+}
+.not-found span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.not-found span:nth-child(3) {
+    animation-delay: 0.6s, 1.2s; /* 1.6s後に倒れる */
+    animation-name: drop, tilt;
+    animation-duration: 0.8s, 0.4s;
+    animation-timing-function: ease-out, ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes tilt {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(0) rotate(30deg);
+    }
+}
+
 .not-found p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
 }
 </style>
 
-<main class="not-found" style="text-align: center;">
-  <h1>404</h1>
+<main class="not-found">
+  <h1>
+    <span>4</span>
+    <span>0</span>
+    <span>4</span>
+  </h1>
   <p>Oops! The page you are looking for does not exist.</p>
   <p>ページが見つかりませんでした。</p>
-  <p><a href="{{ '/' | relative_url }}">← Back to Home</a></p>
+  <p><a href="{{ '/' | relative_url }}">← Home</a> / <a href="{{ '/index_ja.html' | relative_url }}">← ホーム</a></p>
 </main>

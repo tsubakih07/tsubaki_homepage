@@ -1,7 +1,7 @@
 - month: 2025年8月
   items:
     - date: 2025.08.01
-      text: ウェブサイトを公開しました。  
+      text: ウェブサイトを公開。  
 
 - month: 2025年7月
   items:
@@ -23,6 +23,10 @@
     - date: 2025.02.20
       text: 台風Chanthuの地形性降水に関する研究を<a href="https://www.eorc.jaxa.jp/IPWG/FG1/index.html" target="_blank">IPWG-OPFG</a>で講演。
 
+- month: 2024年11月
+  items:
+    - date: 2024.11.19
+      text: 2024 NTU-Kyoto University-Uiversity of Humburg Trilateral Symposium Parallel Session - Flood/Disaster Preventionで講演。
 
 - month: 2024年7月
   items:
