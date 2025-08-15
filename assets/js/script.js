@@ -1,3 +1,13 @@
+// ローダーの表示と非表示
+window.addEventListener("load", function() {
+  const loader = document.getElementById("loader");
+  loader.style.opacity = "0";
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 500);
+});
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const element = document.querySelector('title');
     // 少し遅延させてからクラスを追加
