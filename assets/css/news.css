@@ -10,13 +10,16 @@
 .news-item {
   margin-bottom: 1rem;
 }
+
 .news-date {
   font-weight: bold;
   color: #555;
+  margin-top: 0.1rem;
 }
 
 /* News section */
 .news-yyyy-mm-dd {
+  padding: 0.1rem 0.1rem;
   font-size: 0.9rem;
   color: #555;
 }

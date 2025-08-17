@@ -18,10 +18,11 @@ css : /assets/css/style.css
     <div class="news-item">
       <div class="news-date">{{ list.month }}</div>
       {% for item in list.items %}
-        <div>
+        <div style="display: flex; align-items: top;">
         <span class="news-yyyy-mm-dd">{{ item.date }}</span>
         <span class="news-text">{{ item.text }}</span>
         </div>
+        <hr size="2" color="#eee" noshade>
       {% endfor %}
     </div>
   {% endfor %}
