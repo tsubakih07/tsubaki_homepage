@@ -73,4 +73,3 @@ window.addEventListener('resize', () => {
     btn.classList.remove('active');
   }
 });
-

@@ -39,3 +39,5 @@ exclude:
   - package-lock.json
 
 google_analytics: G-SGBM1LF08E
+
+timezone: Asia/Taipei   # または Asia/Tokyo
