@@ -13,8 +13,9 @@
 
 .news-date {
   font-weight: bold;
-  color: #555;
+  color: #3e543c;
   margin-top: 0.1rem;
+  font-size: 1.1rem;
 }
 
 /* News section */
@@ -27,4 +28,5 @@
 .news-text {
   padding: 0 0.5rem;
   display: inline;
+  font-size: 1rem;
 }
