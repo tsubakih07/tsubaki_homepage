@@ -88,20 +88,30 @@ css: /assets/css/style.css
   <h2>趣味・特技</h2>
   <div class="hobbies-container">
     <ul class="hobbies-list">
-      <li>楽器演奏（小中高：吹奏楽部、大学：モダンジャズオーケストラMOJO）</li>
-      <ul>
-        <li>トランペット（小）</li>
-        <li>ユーフォニウム（中・高）</li>
-        <li>トロンボーン（中・高・大）</li>
-        <li>ギター（たまに弾く）</li>
-      </ul>
-      <li>猫とゆったり過ごすこと</li>
-      <li>旅行</li>
-      <li>語学学習（英語、中国語、韓国語）</li>
-      <li>書道（茅原書藝會）</li>
+      <details>
+        <summary>楽器演奏（吹奏楽・ジャズバンド）</summary>
+        <ul>
+          <li>トランペット（小学校）</li>
+          <li>ユーフォニウム（中学・高校）</li>
+          <li>トロンボーン（中学・高校・大学）</li>
+          <li>ギター（たまに弾く）</li>
+        </ul>
+      </details>
+      <details>
+        <summary>猫とゆったり過ごすこと</summary>
+          <div class="hobbies-photo">
+          <img src="{{ '/assets/images/cat.png' | relative_url }}" alt="猫画像" style="height: 100px; width: auto;">
+        </div>
+      </details>
+      <details>
+        <summary>旅行</summary>
+      </details>
+      <details>
+        <summary>語学学習（英語、中国語、韓国語）</summary>
+      </details>
+      <details>
+        <summary>書道（茅原書藝會）</summary>
+      </details>
     </ul>
-    <div class="hobbies-photo">
-      <img src="{{ '/assets/images/cat.png' | relative_url }}" alt="猫画像" style="height: 300px;">
-    </div>
   </div>
 </section>

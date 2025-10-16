@@ -78,20 +78,42 @@ css: /assets/css/style.css
   <h2>Hobbies</h2>
   <div class="hobbies-container">
     <ul class="hobbies-list">
-      <li>Playing the instruments, <em>in Brass band and Big band</em></li>
-      <ul>
-        <li>Trumpet (Elementary School)</li>
-        <li>Euphonium (Middle and High School)</li>
-        <li>Trombone (Middle, High School, and University)</li>
-        <li>Guitar (Occasionally)</li>
-      </ul>
-      <li>Relaxing with cats</li>
-      <li>Traveling with friends</li>
-      <li>Studying foreign languages: <em>English, Chinese, and Korean</em></li>
-      <li>Practicing calligraphy (<em>Shodo</em>)</li>
+      <details>
+        <summary>Playing the instruments, <em>in Brass band and Big band</em></summary>
+        <ul>
+          <li>Trumpet (Elementary School)</li>
+          <li>Euphonium (Middle and High School)</li>
+          <li>Trombone (Middle, High School, and University)</li>
+          <li>Guitar (xOccasionally)</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Relaxing with cats</summary>
+          <div class="hobbies-photo">
+          <img src="{{ '/assets/images/cat.png' | relative_url }}" alt="猫画像" style="height: 100px; width: auto;">
+        </div>
+      </details>
+      <details>
+        <summary>Traveling with friends</summary>
+        <ul>
+          <li>Japan: Okinawa, Hokkaido, Tokyo, Kyoto, Osaka, Hiroshima, Fukuoka, etc.</li>
+          <li>Overseas: Taiwan, South Korea, Thailand, Malaysia, Singapore, Hawaii</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Studying foreign languages: <em>English, Chinese, and Korean</em></summary>
+        <ul>
+          <li>English: TOEFL 89</li>
+          <li>Chinese: TOCFL B1</li>
+          <li>Korean: Beginner</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Practicing calligraphy (<em>Shodo</em>)</summary>
+        <ul>
+          <li>Member of Chihara Shogeikai (茅原書藝會)</li>
+        </ul>
+      </details>
     </ul>
-    <div class="hobbies-photo">
-      <img src="{{ '/assets/images/cat.png' | relative_url }}" alt="猫画像" style="height: 300px; width: auto;">
-    </div>
   </div>
 </section>
