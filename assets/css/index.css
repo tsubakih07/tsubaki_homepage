@@ -39,18 +39,21 @@ a {
   flex-wrap: wrap;
 }
 .hobbies-list {
-  flex: 1 1 300px;
+  /* flex: 1 1 300px; */
+    margin-left: 0rem;
+
 }
 @media (max-width: 800px) {
   .hobbies-container {
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: stretch;
   }
   .hobbies-photo {
-    margin-left: 0;
+    margin-left: 1rem;
     margin-top: 0;
     align-self: center;
     max-width: 100%; 
     height: auto;
+    flex-direction: row;
   }
 }
