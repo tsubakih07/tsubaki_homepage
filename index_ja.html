@@ -48,7 +48,7 @@ css: /assets/css/style.css
   </ul>
 </section>
 
-{% assign sections_pub = site.data.cv_ja | where: "id", "publication" %}
+{% assign sections_pub = site.data.cv | where: "id", "publication" %}
 {% assign sections_award = site.data.cv_ja | where: "id", "awards" %}
 {% assign sections_conf = site.data.cv_ja | where: "id", "conference" %}
 {% assign target_sections = sections_pub | concat: sections_award | concat: sections_conf %}
@@ -69,7 +69,7 @@ css: /assets/css/style.css
     {% if section.items %}
       {% if section.id == 'publication' %}
         <ul>
-          {% for pub in section.items limit:2 %}
+          {% for pub in site.data.publications limit:2 %}
             <li>{{ pub | replace: 'Hosokawa, T.', '<strong>Hosokawa, T.</strong>' }}</li>
           {% endfor %}
         </ul>

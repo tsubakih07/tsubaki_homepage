@@ -9,7 +9,7 @@
   title: 査読付き論文
   ordered: true
   items:
-    - "Hosokawa, T. and C.-K. Yu, 2025: Kinematics and Microphysics of Orographic Precipitation Associated with Different Background Precipitation of Typhoon Chanthu (2021), <em>J. Atmos. Sci.</em>, accepted."
+    - # list in publications.yml
 
 - id: awards
   title: 受賞歴

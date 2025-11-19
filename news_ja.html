@@ -16,6 +16,9 @@ css : /assets/css/style.css
 <div class="scroll-box">
   {% for list in site.data.news_ja %}
     <div class="news-item">
+      {% if list.title %}
+      <div class="news-title">{{ list.title }}</div>
+      {% endif %}
       <div class="news-date">{{ list.month }}</div>
       {% for item in list.items %}
         <div style="display: flex; align-items: top;">

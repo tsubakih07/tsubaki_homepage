@@ -28,7 +28,7 @@ css : /assets/css/cv.css
     {% if section.items %}
       {% if section.id == 'publication' %}
         <ul>
-          {% for pub in section.items %}
+          {% for pub in site.data.publications %}
             <li>{{ pub | replace: 'Hosokawa, T.', '<strong>Hosokawa, T.</strong>' }}</li>
           {% endfor %}
         </ul>

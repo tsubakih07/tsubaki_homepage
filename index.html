@@ -59,7 +59,7 @@ css: /assets/css/style.css
     {% if section.items %}
       {% if section.id == 'publication' %}
         <ul>
-          {% for pub in section.items limit:2 %}
+          {% for pub in site.data.publications limit:2 %}
             <li>{{ pub | replace: 'Hosokawa, T.', '<strong>Hosokawa, T.</strong>' }}</li>
           {% endfor %}
         </ul>
