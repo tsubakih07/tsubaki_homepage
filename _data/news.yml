@@ -1,9 +1,9 @@
-- title: ------ Upcoming Events ------
+# - title: ------ Upcoming Events ------
 
-- month: December 2025
-  items:
-    - date: 2025.12.01–03
-      text: ISEE Symposium 2025, Nagoya, Japan.
+# - month: December 2025
+#   items:
+#     - date: 2025.12.01–03
+#       text: ISEE Symposium 2025, Nagoya, Japan.
 
 - title: ------ Past Events ------
 
