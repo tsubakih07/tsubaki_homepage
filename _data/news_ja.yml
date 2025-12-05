@@ -1,11 +1,12 @@
 # - title: ------ Upcoming Events ------
 
-# - month: 2025年12月
-#   items:
-#     - date: 2025.12.01–03
-#       text: ISEE Symposium 2025（＠日本名古屋）に参加予定です。
 
 - title: ------ Past Events ------
+
+- month: 2025年12月
+  items:
+    - date: 2025.12.01–03
+      text: ISEE Symposium 2025（＠日本名古屋）にて口頭発表をしました。
 
 - month: 2025年11月
   items:
