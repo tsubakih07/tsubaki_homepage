@@ -520,3 +520,45 @@ h3 {
   height: 100%;
   border: none;
 }
+
+/* 共通：アイコンの丸い背景 */
+.icon-badge {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;      /* アイコン外縁サイズ */
+  height: 35px;
+  margin: 0 8px;    /* アイコン同士の距離 */
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 25px;    /* アイコンサイズ */
+  color: white;
+
+  /* ▼ 陰影（二重シャドウ）*/
+  box-shadow:
+  /* 外側の柔らかい影（浮かせる） */
+    0 4px 8px rgba(0, 0, 0, 0.25), 
+    /* 内側の明るい縁（立体感） */
+    inset 0 1px 2px rgba(255, 255, 255, 0.3); 
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+/* ORCID（公式カラー） */
+.icon-badge.orcid {
+  background-color: #A6CE39;
+}
+
+/* GitHub（黒背景） */
+.icon-badge.github {
+  background-color: #24292e;
+}
+
+/* ホバー時：さらに浮く感じを強調 */
+.icon-badge:hover {
+  transform: scale(1.15);
+  box-shadow:
+    0 6px 12px rgba(0, 0, 0, 0.35),
+    inset 0 1px 2px rgba(255, 255, 255, 0.35);
+  opacity: 0.95;
+}
