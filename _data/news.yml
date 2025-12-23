@@ -1,13 +1,16 @@
-# - title: ------ Upcoming Events ------
-# - month: December 2025
-#   items:
-#     - date: 2025.12.01–03
-#       text: ISEE Symposium 2025, Nagoya, Japan.
+- title: ------ Upcoming Events ------
+- month: January 2026
+  items:
+    - date: 2026.01.14
+      text: PhD Dissertation Defense.
 
 - title: ------ Past Events ------
 
 - month: December 2025
   items:
+    - date: 2025.12.23
+      text: '<a href="https://doi.org/10.1175/JAS-D-25-0022.1" target="_blank">"Kinematics and Microphysics of Orographic Precipitation Associated with Different Background Precipitation of Typhoon Chanthu (2021)"</a> has been published in <em>J. Atmos. Sci.</em>.'
+
     - date: 2025.12.01–03
       text: Oral presentation at ISEE Symposium 2025, Nagoya, Japan.
 

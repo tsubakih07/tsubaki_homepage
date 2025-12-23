@@ -1,10 +1,15 @@
-# - title: ------ Upcoming Events ------
-
+- title: ------ Upcoming Events ------
+- month: January 2026
+  items:
+    - date: 2026.01.14
+      text: 公聴会.
 
 - title: ------ Past Events ------
 
 - month: 2025年12月
   items:
+    - date: 2025.12.23
+      text: '<a href="https://doi.org/10.1175/JAS-D-25-0022.1" target="_blank">"Kinematics and Microphysics of Orographic Precipitation Associated with Different Background Precipitation of Typhoon Chanthu (2021)"</a>が<em>J. Atmos. Sci.</em>に掲載されました。'
     - date: 2025.12.01–03
       text: ISEE Symposium 2025（＠日本名古屋）にて口頭発表をしました。
 
