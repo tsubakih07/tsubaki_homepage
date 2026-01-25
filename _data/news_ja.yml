@@ -1,10 +1,10 @@
-- title: ------ Upcoming Events ------
+# - title: ------ Upcoming Events ------
+
+- title: ------ Past Events ------
 - month: January 2026
   items:
     - date: 2026.01.14
-      text: 公聴会.
-
-- title: ------ Past Events ------
+      text: 博士課程学位審査を通過しました。
 
 - month: 2025年12月
   items:

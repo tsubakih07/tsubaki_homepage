@@ -1,10 +1,10 @@
-- title: ------ Upcoming Events ------
+# - title: ------ Upcoming Events ------
+
+- title: ------ Past Events ------
 - month: January 2026
   items:
     - date: 2026.01.14
-      text: PhD Dissertation Defense.
-
-- title: ------ Past Events ------
+      text: Passed my PhD Dissertation Defense.
 
 - month: December 2025
   items:
