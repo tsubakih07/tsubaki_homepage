@@ -1,6 +1,17 @@
 # - title: ------ Upcoming Events ------
 
 - title: ------ Past Events ------
+- month: 2026年3月
+  items:
+    - date: 2026.03.05
+      text: 国立中興大学（台中、台湾）で講演しました。
+            # <br>☞ <a href="https://www.facebook.com/nchu.ce/posts/%E5%B0%88%E9%A1%8C%E6%BC%94%E8%AC%9B%E8%AC%9B%E9%A1%8Ckinematics-and-microphysics-of-orographically-enhanced-precipitation-assoc/1366734478590579/" target="_blank">関連リンク</a>
+
+- month: 2026年2月
+  items:
+    - date: 2026.02.26
+      text: 博士号を取得しました。
+
 - month: 2026年1月
   items:
     - date: 2026.01.14

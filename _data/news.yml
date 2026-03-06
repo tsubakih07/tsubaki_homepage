@@ -1,6 +1,17 @@
 # - title: ------ Upcoming Events ------
 
 - title: ------ Past Events ------
+- month: March 2026
+  items:
+    - date: 2026.03.05
+      text: Gave a talk at NCHU, Taichung, Taiwan. 
+            # <br>☞ See <a href="https://www.facebook.com/nchu.ce/posts/%E5%B0%88%E9%A1%8C%E6%BC%94%E8%AC%9B%E8%AC%9B%E9%A1%8Ckinematics-and-microphysics-of-orographically-enhanced-precipitation-assoc/1366734478590579/" target="_blank">Facebook post!</a>
+
+- month: February 2026
+  items:
+    - date: 2026.02.26
+      text: Received my Diploma!
+
 - month: January 2026
   items:
     - date: 2026.01.14

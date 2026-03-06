@@ -531,7 +531,7 @@ h3 {
   margin: 0 8px;    /* アイコン同士の距離 */
   border-radius: 50%;
   text-decoration: none;
-  font-size: 27px;    /* アイコンサイズ */
+  font-size: 25px;    /* アイコンサイズ */
   background-color: white;
 
   /* ▼ 陰影（二重シャドウ）*/
@@ -551,6 +551,11 @@ h3 {
 /* GitHub（黒背景） */
 .icon-badge.github {
   color: #24292e;
+}
+
+/* Google Scholar（青系） */
+.icon-badge.google-scholar {  
+  color: #4285F4;
 }
 
 /* ホバー時：さらに浮く感じを強調 */
