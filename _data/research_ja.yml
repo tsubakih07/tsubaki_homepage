@@ -27,6 +27,8 @@ sections:
   - id: posters
     title: ポスター発表
     posters:
+      - title: ICMCS-XVII, Penghu, Taiwan, 2026
+        iframe: https://drive.google.com/file/d/1lUdMIFSV4ClhzUHwKMYUFPV2Wi0hfF-A/preview
       - title: AOGS2023 Annual Meeting, Singapore, 2023
         iframe: https://drive.google.com/file/d/1nlAD858qs0RGnc6laSx29X-3lFZWVOkl/preview
       - title: ICMCS-XV, Fort Collins, Colorado, USA (Online), 2023

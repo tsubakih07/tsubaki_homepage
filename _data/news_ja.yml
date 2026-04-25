@@ -1,6 +1,14 @@
 # - title: ------ Upcoming Events ------
 
 - title: ------ Past Events ------
+- month: 2026年4月
+  items:
+    - date: 2026.04.20–24
+      text: 台湾澎湖で開催されたICMCS-XVIIにて口頭・ポスター発表をしました。
+
+    - date: 2026.04.18
+      text: 台北EOCで開催されたWorkshop on Radar Applications and Disaster Responseにて講演しました。
+
 - month: 2026年3月
   items:
     - date: 2026.03.05

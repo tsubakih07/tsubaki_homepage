@@ -1,6 +1,14 @@
 # - title: ------ Upcoming Events ------
 
 - title: ------ Past Events ------
+- month: April 2026
+  items:
+    - date: 2026.04.20–24
+      text: Oral & Poster presentation at ICMCS-XVII, Penghu, Taiwan. 
+
+    - date: 2026.04.18
+      text: Gave a talk at Workshop on Radar Applications and Disaster Response at Taipei EOC, Taipei, Taiwan. 
+
 - month: March 2026
   items:
     - date: 2026.03.05

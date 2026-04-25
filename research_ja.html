@@ -41,9 +41,12 @@ css : /assets/css/style.css
     {% for poster in section.posters %}
     <div class="iframe-container">
       <h3>{{ poster.title }}</h3>
-      <div class="responsive-iframe">
-        <iframe src="{{ poster.iframe }}" allow="autoplay"></iframe>
-      </div>
+      <details>
+        <summary>Open</summary>
+        <div class="responsive-iframe">
+          <iframe src="{{ poster.iframe }}" allow="autoplay"></iframe>
+        </div>
+      </details>
     </div>
     {% endfor %}
 
