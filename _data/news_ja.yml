@@ -1,6 +1,10 @@
 # - title: ------ Upcoming Events ------
 
 - title: ------ Past Events ------
+- month: 2026年6月
+  items:
+    - date: 2026.06.02
+      text: IPC15のアジアワークショップで講演し、アジアの降水研究の現状の課題と将来の展望について議論しました。
 - month: 2026年4月
   items:
     - date: 2026.04.20–24

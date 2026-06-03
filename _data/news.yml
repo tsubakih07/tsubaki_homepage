@@ -1,6 +1,10 @@
 # - title: ------ Upcoming Events ------
 
 - title: ------ Past Events ------
+- month: June 2026
+  items:
+    - date: 2026.06.02
+      text: Gave a talk and discussed the current challenges and future oppotunities for Asia precipitation research at the IPC15 pre-conference Asia Workshop.
 - month: April 2026
   items:
     - date: 2026.04.20–24
