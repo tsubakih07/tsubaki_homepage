@@ -1,6 +1,10 @@
 # - title: ------ Upcoming Events ------
 
 - title: ------ Past Events ------
+- month: August 2026
+  items:
+    - date: 2026.08.05
+      text: Gave an oral presentation at AOGS2026, Fukuoka, Japan.   
 - month: June 2026
   items:
     - date: 2026.06.02

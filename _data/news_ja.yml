@@ -1,6 +1,10 @@
 # - title: ------ Upcoming Events ------
 
 - title: ------ Past Events ------
+- month: 2026年8月
+  items:
+    - date: 2026.08.05
+      text: AOGS2026（＠日本福岡）にて口頭発表をしました。
 - month: 2026年6月
   items:
     - date: 2026.06.02
