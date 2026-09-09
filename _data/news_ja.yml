@@ -1,6 +1,10 @@
 # - title: ------ Upcoming Events ------
 
 - title: ------ Past Events ------
+- month: 2026年9月
+  items:
+    - date: 2026.09.04
+      text: コロラド州立大学でポスドク研究員としての勤務を開始しました。
 - month: 2026年8月
   items:
     - date: 2026.08.05
