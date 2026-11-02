@@ -2,6 +2,7 @@
 # 一般的なJekyll向け設定
 # ========================
 _site/                 # Jekyllがビルド時に生成するサイト出力フォルダ
+_site
 .sass-cache/          # Sassのキャッシュフォルダ
 .jekyll-cache/        # Jekyllのビルドキャッシュ
 .jekyll-metadata

@@ -14,37 +14,37 @@ css : /assets/css/cv.css
 
 <section class="section">
   <p><strong>{{ site.data.profiles.info_en.name }}</strong><br>
-  Ph.D. in Atmospheric Sciences, National Taiwan University<br>
-  Email: {{ site.data.profiles.info_en.email }}<br>
-  📄 <a href="https://drive.google.com/file/d/1T6GiXu-OLAyBPLtVutVjeOaEnKnI9orF/view?usp=drive_link" target="_blank">Download full PDF CV</a>
+    Ph.D. in Atmospheric Sciences, {{ site.data.profiles.info_en.affiliation }}<br>
+    Email: {{ site.data.profiles.info_en.email }}<br>
+    📄 <a href="{{ site.data.profiles.links.cv }}" target="_blank">Download full PDF CV</a>
   </p>
 </section>
 
 {% for section in site.data.cv %}
-  <section class="section" id="{{ section.id }}">
-    <h2>{{ section.title }}</h2>
-    {% if section.items %}
-      {% if section.id == 'publication' %}
-        <ol>
-          {% for pub in site.data.publications %}
-            <li>{{ pub | replace: 'Hosokawa, T.', '<strong>Hosokawa, T.</strong>' }}</li>
-          {% endfor %}
-        </ol>
-      {% elsif section.ordered %}
-        <ol>
-          {% for item in section.items %}
-            <li>{{ item }}</li>
-          {% endfor %}
-        </ol>
-      {% else %}
-        <ul>
-          {% for item in section.items %}
-            <li>{{ item }}</li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-    {% endif %}
-  </section>
+<section class="section" id="{{ section.id }}">
+  <h2>{{ section.title }}</h2>
+  {% if section.items %}
+  {% if section.id == 'publication' %}
+  <ol>
+    {% for pub in site.data.publications %}
+    <li>{{ pub | replace: 'Hosokawa, T.', '<strong>Hosokawa, T.</strong>' }}</li>
+    {% endfor %}
+  </ol>
+  {% elsif section.ordered %}
+  <ol>
+    {% for item in section.items %}
+    <li>{{ item }}</li>
+    {% endfor %}
+  </ol>
+  {% else %}
+  <ul>
+    {% for item in section.items %}
+    <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% endif %}
+</section>
 {% endfor %}
 
 
